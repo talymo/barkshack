@@ -23,7 +23,6 @@ body {
     .container.body {
         padding-left:15px;
         padding-right:15px;
-       
     }
 
     .navbar {
@@ -42,6 +41,8 @@ body {
 
     .navbar-default .navbar-toggle {
         border-color:#A1C1BE;
+        margin-bottom:2px;
+        margin-top:24px;
     }
 
         .navbar-default .navbar-toggle:hover {
@@ -49,7 +50,15 @@ body {
         }
 
         .navbar-brand img {
-            width:100px;
+            background-color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            border-radius: 47px;
+            margin-top: -7px;
+            padding: 4px;
+            position: relative;
+            width: 100px;
+            z-index: 10000;
+            padding-top:0;
         }
 
         .navbar-brand h2 {
@@ -60,9 +69,13 @@ body {
     .carousel .item {
         width: 100%; /*slider width*/
         max-height: 600px; /*slider height*/
+       
     }
         .carousel .item img {
-            width: 100%; /*img width*/
+            border:10px solid #fafafa;
+            width:100%;
+            border-top:none;
+            
         }
     /*add some makeup*/
         .carousel .carousel-control {
@@ -117,13 +130,19 @@ body {
     width: 100%;
 }
 
-/*full width container*/
-@media (max-width: 767px) {
-    
+/*Tablet*/
+@media(min-width:768px){
     .block {
         margin-left: -20px;
         margin-right: -20px;
     }
     
+    .navbar-brand img {
+        width:125px;
+        border-radius:65px;
+    }
 }
+
+@media(min-width:992px){}
+@media(min-width:1200px){}
 
