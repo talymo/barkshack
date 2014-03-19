@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('templatesApp', [])
+angular.module('barkApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

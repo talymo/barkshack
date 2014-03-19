@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('templatesApp')
+angular.module('barkApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
