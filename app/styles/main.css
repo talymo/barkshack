@@ -39,6 +39,10 @@ body {
         border:none;
     }
 
+        .navbar-default .navbar-nav > li > a {
+            color: #A1C1BE;
+        }
+
     .navbar-header {
         border:none;
     }
@@ -94,7 +98,7 @@ body {
     }
 
     .divider {
-        border-bottom: 1px solid #59554E;
+        border-bottom: 1px solid #8E887D;
         width:100%;
         display:block;
         height:11px;
@@ -109,7 +113,7 @@ body {
         font-size:14px;
         display:inline-block;
         margin-top:-24px;
-        color:#59554E;
+        color:#8E887D;
     }
 
     #callout p {
@@ -118,12 +122,62 @@ body {
     }
     
     .double-divider {
-        border-top:1px solid #59554E;
-        border-bottom:1px solid #59554E;
+        border-top:1px solid #8E887D;
+        border-bottom:1px solid #8E887D;
         height:5px;
         margin-bottom:30px;
     }
 
+    .container .callout {
+        margin-bottom:20px;
+        text-align:center;
+    }
+
+        .container .callout img{
+            border:10px solid #fff;
+            margin:0 auto;
+        }
+
+        .container .callout h2 {
+            font-size:18px;
+            color:#8E887D;
+            font-weight:400;
+            margin-top:10px;
+        }
+
+    .container #promo {
+        background-color:#F5F5F5;
+        padding:10px;
+        margin-bottom:20px;
+    }
+
+    .container #promo #special {
+        border-color:#A1C1BE;
+        border-style:dashed;
+        border-width:1px;
+        overflow:hidden;
+        display:table;
+        padding:10px;
+        margin:0 auto;
+    }
+
+        .container #promo #special img {
+            background-color: #A1C1BE;
+            border: 1px solid #8E887D;
+            border-radius: 40px;
+            float: left;
+            height: 76px;
+            margin-right: 9px;
+            padding: 6px 20px;
+        }
+
+        .container #promo #special h2 {
+            font-size:18px;
+            color:#8E887D;
+            margin:0;
+            display: table-cell;
+            vertical-align: middle;
+        }
 
 #footer {
     background-color: #f5f5f5;
@@ -136,6 +190,11 @@ body {
 
 /*Tablet*/
 @media(min-width:768px){
+    
+    .navbar .nav {
+        margin-top:12px;
+    }
+    
     .block {
         margin-left: -20px;
         margin-right: -20px;
@@ -144,6 +203,10 @@ body {
     .navbar-brand img {
         width:125px;
         border-radius:65px;
+    }
+    
+    .container #promo #special h2 {
+        font-size:24px;
     }
 }
 
