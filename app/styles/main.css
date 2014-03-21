@@ -74,6 +74,18 @@ body {
             color:#A1C1BE;
         }
 
+	.nav#social {
+        margin-top:0;
+    }
+
+		.nav#social li {
+            display:inline-block;
+        }
+
+		.nav#social img {
+            width:35px;
+        }
+
     .carousel .item {
         width: 100%; /*slider width*/
         max-height: 600px; /*slider height*/
@@ -85,6 +97,7 @@ body {
             border-top:none;
             
         }
+
     /*add some makeup*/
         .carousel .carousel-control {
             background: none;
@@ -93,7 +106,7 @@ body {
         }
 
     #callout {
-        padding-bottom:20px;
+        padding-bottom:10px;
         text-align:center;
     }
 
@@ -119,6 +132,7 @@ body {
     #callout p {
         font-size:16px;
         color:#59554E;
+        padding: 0 30px 20px;
     }
     
     .double-divider {
@@ -167,7 +181,7 @@ body {
             border-radius: 40px;
             float: left;
             height: 76px;
-            margin-right: 9px;
+            margin-right: 26px;
             padding: 6px 20px;
         }
 
@@ -183,16 +197,33 @@ body {
     background-color: #f5f5f5;
     bottom: 0;
     /* Set the fixed height of the footer here */
-    height: 60px;
+    height: auto;
     position: absolute;
     width: 100%;
+    text-align:center;
+    padding-top:13px;
 }
+
+	#footer .container,
+	#footer .container a {
+        color:#86AAA7;
+        font-size:12px;
+    }
+
+	#footer .container .pipes {
+        display:none;
+    }
 
 /*Tablet*/
 @media(min-width:768px){
     
     .navbar .nav {
         margin-top:12px;
+    }
+    
+    .nav#social a {
+        padding:0;
+        padding:15px 5px 0px 0px;
     }
     
     .block {
@@ -208,6 +239,20 @@ body {
     .container #promo #special h2 {
         font-size:24px;
     }
+    
+    .nav#social {
+        margin-top:9px;
+    }
+    
+        .nav#social img {
+            width:20px;
+        }
+    
+   	#footer .container .pipes {
+        display:inline-block;
+        padding:0 10px;
+    }
+    
 }
 
 @media(min-width:992px){}
