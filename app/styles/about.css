@@ -1,0 +1,32 @@
+#aboutDivider {
+    margin: 70px 0 70px 0;
+}
+
+#contentContainer {
+    background-color: #fff;
+    padding: 24px 25px;
+}
+
+        #contentContainer #innerContainer {
+            border: 1px solid #C5BCB5;
+            padding: 65px 61px;
+        }
+
+            #contentContainer #innerContainer .largeContent {
+                margin-bottom: 50px;
+                padding: 0 60px;
+                font-size: 24px;
+                color:#8E887D;
+                    }
+
+            #innerContainer #text {
+                padding-top:50px;
+            }   
+
+                #innerContainer #text > p {
+                    font-size: 16px;
+                    padding: 0 0 10px 0;
+                    color: #59554E
+                    margin: 30px;
+                }
+
