@@ -1,15 +1,27 @@
 #aboutDivider {
     margin: 70px 0 70px 0;
+    display: block;
 }
 
 #contentContainer {
     background-color: #fff;
     padding: 24px 25px;
+    margin-top: 0;
 }
 
         #contentContainer #innerContainer {
             border: 1px solid #C5BCB5;
             padding: 65px 0 0 0;
+        }
+
+        #contentContainer #innerContainer #aboutHero {
+            padding-left: 10px;
+            padding-right:10px;
+        }
+
+        #contentContainer #inner {                       
+            padding-right: 10px;
+            padding-left: 10px;   
         }
 
             #contentContainer #innerContainer .largeContent {
@@ -32,6 +44,13 @@
 
 /*Tablet*/
 @media(min-width:768px){
+    #aboutDivider {
+        display: none;
+    }
+    
+    #contentContainer {
+        margin-top: 100px;
+    }
 
     #contentContainer #innerContainer .largeContent { 
         padding: 0 40px;
@@ -40,10 +59,16 @@
     #contentContainer #innerContainer {
         padding: 65px 61px;
     }
+    
+    #contentContainer #innerContainer #aboutHero {
+            padding-left: 0;
+            padding-right:0;
+        }
      
     #innerContainer #text > p {
         padding: 0 0 10px 0;    
     }
+    
     #contentContainer #innerContainer .largeContent {
         padding: 0;
     }
