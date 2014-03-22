@@ -17,6 +17,11 @@ angular.module('barkApp', [])
         templateUrl: 'views/faqs.html',
         controller: 'MainCtrl'
       })
+    
+    .when('/services', {
+        templateUrl: 'views/services.html',
+        controller: 'MainCtrl'
+      })
    
       .otherwise({
         redirectTo: '/'

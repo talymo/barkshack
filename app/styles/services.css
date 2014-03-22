@@ -1,0 +1,38 @@
+#contentContainer #innerContainer .mobile-buttons {
+           display: block;  
+        }
+
+    #innerContainer .mobile-buttons .mobile-btn {
+               display: block; 
+               padding:10px; 
+            }
+        .mobile-buttons .mobile-btn .full-btn {
+           width: 80% 
+        }
+
+#contentContainer #innerContainer .desktop-buttons {
+           display: none; 
+        }
+
+#innerContainer .desktop-buttons .desktop-btn {
+           padding: 10px;  
+        }
+
+#innerContainer .servicesContainer {
+    padding: 15px 10px;
+}
+
+
+
+
+/*Tablet*/
+@media(min-width:768px){
+ 
+        #contentContainer #innerContainer .mobile-buttons {
+            display: none;    
+        }
+    
+        #contentContainer #innerContainer .desktop-buttons {
+           display: block; 
+        }
+}
