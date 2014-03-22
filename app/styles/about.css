@@ -1,18 +1,55 @@
-#aboutDivider {
-    margin: 70px 0 70px 0;
-    display: block;
+#about {
+    padding-top:60px;
+    margin-bottom:20px;
 }
 
+    #about h2,
+    #about p {
+        color:#7F6B5B;
+    }
+
+    #about h2 {
+        font-size:20px;
+        text-align:center;
+    }
+
+    #about img {
+        margin:20px 0;
+    }
+
+    #about p {
+        padding:0 10px;
+        text-align:center;
+        line-height:28px;
+        font-size:16px;
+    }
+
+
+
+@media(min-width:992px){
+    #about p {
+        padding: 0 50px;
+        line-height:28px;
+    }
+}
+
+
+
+
+/*
+
+
+
 #contentContainer {
-    background-color: #fff;
+    background-color: #A1C1BE;
     padding: 24px 25px;
     margin-top: 0;
 }
 
         #contentContainer #innerContainer {
-            border: 1px solid #C5BCB5;
-            padding: 65px 0 0 0;
-            background-color: #E2E3DE;
+            border: 4px double #C5BCB5;
+            padding: 10px 0 0 0;
+            background-color:#fff;
         }
 
         #contentContainer #innerContainer #aboutHero {
@@ -26,9 +63,9 @@
         }
 
             #contentContainer #innerContainer .largeContent {
-                margin-bottom: 25px;
+                margin-bottom: 10px;
                 padding: 10px;
-                font-size: 24px;
+                font-size: 16px;
                 color:#8E887D;
             }
 
@@ -45,14 +82,13 @@
                 }
 
 
-/*Tablet*/
 @media(min-width:768px){
     #aboutDivider {
         display: none;
     }
     
     #contentContainer {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     #contentContainer #innerContainer .largeContent { 
@@ -78,3 +114,5 @@
         font-size: 28px;
     }
 }
+
+*/

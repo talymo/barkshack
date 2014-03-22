@@ -3,13 +3,12 @@
 }
 
 html {
-    background-color:#E2E3D9;
     min-height: 100%;
     position: relative;
 }
 
 body {
-    background-color:#E2E3D9;
+    background-image:url('../images/tree_bark.png');
     color: #333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* Margin bottom by footer height */
@@ -22,6 +21,12 @@ body {
         border:0;
     }
 
+    .clear {
+        height:20px;
+        float:left;
+        width:100%;
+    }
+
     .container.main {
         padding:0;
     }
@@ -29,6 +34,17 @@ body {
     .container.body {
         padding-left:15px;
         padding-right:15px;
+        
+    }
+
+    .container #home {
+        background-color:#F3F3F3;
+        border:10px solid #A1C1BE;
+        margin-bottom:20px;
+    }
+
+    .container #about {
+        background-color:transparent;
     }
 
     .navbar {
@@ -98,7 +114,6 @@ body {
        
     }
         .carousel .item img {
-            border:10px solid #fafafa;
             width:100%;
             border-top:none;
             
@@ -127,7 +142,7 @@ body {
     }
 
     .divider span {
-        background-color:#E2E3D9;
+        background-color:#F3F3F3;
         padding:0 20px;
         font-size:14px;
         display:inline-block;
@@ -203,6 +218,18 @@ body {
             height:300px;
         }
 
+        .container #tealContainer {
+            background-color: #A1C1BE;
+            padding: 10px;
+            margin-top: 0;
+        }
+
+        .container #whiteContainer {
+            background-color: #F3F3F3;
+            padding: 0px 5px;
+            margin:0;
+        }
+
 #footer {
     background-color: #f5f5f5;
     bottom: 0;
@@ -257,6 +284,14 @@ body {
         .nav#social img {
             width:20px;
         }
+    
+    .container #tealContainer {
+        padding: 10px;
+    }
+    
+    .container #whiteContainer {
+        padding: 24px 25px;
+    }
     
    	#footer .container .pipes {
         display:inline-block;

@@ -8,7 +8,11 @@ angular.module('barkApp')
       'Karma'
     ];
       
-    var styles = [
+      var mapDiv = $('#map').is(':visible');
+      
+      
+    if(mapDiv){
+        var styles = [
         {
             featureType: 'landscape',
             elementType: 'all',
@@ -49,6 +53,9 @@ angular.module('barkApp')
           title: 'Barkshack',
           icon: 'images/marker.png'
       });
+    }
+      
+    
 
 
       
