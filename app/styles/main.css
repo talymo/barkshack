@@ -16,6 +16,12 @@ body {
     margin-bottom: 60px;
 }
 
+    a:focus,
+    a:active {
+        outline:none;
+        border:0;
+    }
+
     .container.main {
         padding:0;
     }
