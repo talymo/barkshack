@@ -12,6 +12,7 @@
         #contentContainer #innerContainer {
             border: 1px solid #C5BCB5;
             padding: 65px 0 0 0;
+            background-color: #E2E3DE;
         }
 
         #contentContainer #innerContainer #aboutHero {
@@ -25,22 +26,24 @@
         }
 
             #contentContainer #innerContainer .largeContent {
-                margin-bottom: 50px;
+                margin-bottom: 25px;
                 padding: 10px;
                 font-size: 24px;
                 color:#8E887D;
-                    }
+            }
+
 
             #innerContainer #text {
                 padding-top:50px;
             }   
 
                 #innerContainer #text > p {
-                    font-size: 16px;
+                    font-size: 14px;
                     padding: 0 10px 10px 10px;
                     color: #59554E
                     margin: 30px;
                 }
+
 
 /*Tablet*/
 @media(min-width:768px){
@@ -66,10 +69,12 @@
         }
      
     #innerContainer #text > p {
-        padding: 0 0 10px 0;    
+        padding: 0 0 10px 0; 
+        font-size: 16px;
     }
     
     #contentContainer #innerContainer .largeContent {
         padding: 0;
+        font-size: 28px;
     }
 }
