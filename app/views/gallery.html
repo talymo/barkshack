@@ -1,0 +1,21 @@
+<div class="row" id="gallery">
+    
+    <div class="col-xs-12" id="tealContainer">
+        
+        <div class="row" id="whiteContainer">
+            
+            <div class="col-xs-12">
+                <h2>Every day is a holiday for our furry friends here at Barkshack. Check out some of the latest photos from our day!</h2>
+            </div>
+            
+            <div class="col-xs-12" id="pics">
+                
+                <div ng-repeat="pic in instagrams">
+                    <img ng-src="{{pic.images.standard_resolution.url}}" />
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>

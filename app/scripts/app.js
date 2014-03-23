@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('barkApp', [])
-  .config(function ($routeProvider) {
+var barkshack = angular.module('barkApp', []);
+
+barkshack.config(function($routeProvider){
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -23,7 +24,12 @@ angular.module('barkApp', [])
         controller: 'MainCtrl'
       })
    
+    .when('/gallery', {
+        templateUrl: 'views/gallery.html',
+        controller: 'GalleryCtrl'
+    })
       .otherwise({
         redirectTo: '/'
       });
-  });
+});
+

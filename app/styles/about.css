@@ -1,17 +1,7 @@
 #about {
-    padding-top:60px;
     margin-bottom:20px;
 }
 
-    #about h2,
-    #about p {
-        color:#7F6B5B;
-    }
-
-    #about h2 {
-        font-size:20px;
-        text-align:center;
-    }
 
     #about img {
         margin:20px 0;

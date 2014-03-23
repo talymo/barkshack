@@ -1,0 +1,38 @@
+/*
+    Document   : app/styles/gallery.css
+    Created on : 2014-03-23 01:00 AM
+    Author     : talymo
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+#gallery {
+    
+}
+
+    #gallery #pics {
+        margin-top:30px;
+        padding-bottom:20px;
+    }
+
+    #gallery img {
+        width:50%;
+        float:left;
+    }
+
+@media(min-width:768px){
+    
+}
+
+@media(min-width:992px){
+    #gallery img {
+        width:33.3333333333%;
+    }
+}
+
+@media(min-width:1120px){
+    #gallery img {
+        width:25%;
+    }
+}

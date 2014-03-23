@@ -1,15 +1,8 @@
 'use strict';
 
-angular.module('barkApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-      
-      var mapDiv = $('#map').is(':visible');
-      
+barkshack.controller('MainCtrl', function ($scope) {
+         
+    var mapDiv = $('#map').is(':visible'); 
       
     if(mapDiv){
         var styles = [
@@ -34,6 +27,7 @@ angular.module('barkApp')
             ] 
         }
     ];
+        
     var options = {
         mapTypeControlOptions: {
             mapTypeIds: [ 'Styled']
@@ -55,8 +49,14 @@ angular.module('barkApp')
       });
     }
       
-    
-
-
-      
   });
+
+barkshack.controller('GalleryCtrl', function($scope, $http, instagrams) {
+    //Need to get the instagram feed
+    instagrams.fetchPopular(function(data){
+        
+		$scope.instagrams = data;
+        
+        
+	});
+});
