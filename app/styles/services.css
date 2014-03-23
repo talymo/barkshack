@@ -1,8 +1,8 @@
-#contentContainer #innerContainer .mobile-buttons {
+#tealContainer #whiteContainer .mobile-buttons {
            display: block;  
         }
 
-    #innerContainer .mobile-buttons .mobile-btn {
+    #whiteContainer .mobile-buttons .mobile-btn {
                display: block; 
                padding:10px; 
             }
@@ -10,16 +10,17 @@
            width: 80% 
         }
 
-#contentContainer #innerContainer .desktop-buttons {
+#tealContainer #whiteContainer .desktop-buttons {
            display: none; 
         }
 
-#innerContainer .desktop-buttons .desktop-btn {
+#whiteContainer .desktop-buttons .desktop-btn {
            padding: 10px;  
         }
 
-#innerContainer .servicesContainer {
+#tealContainer .services {
     padding: 15px 10px;
+    text-align: center;
 }
 
 
@@ -28,11 +29,11 @@
 /*Tablet*/
 @media(min-width:768px){
  
-        #contentContainer #innerContainer .mobile-buttons {
+        #tealContainer #whiteContainer .mobile-buttons {
             display: none;    
         }
     
-        #contentContainer #innerContainer .desktop-buttons {
+        #tealContainer #whiteContainer .desktop-buttons {
            display: block; 
         }
 }
