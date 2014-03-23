@@ -66,6 +66,10 @@ body {
             color: #A1C1BE;
         }
 
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+            color:#4D2F15;
+        }
+
     .navbar-header {
         border:none;
     }
@@ -237,8 +241,11 @@ body {
                 }
 
                 .container #whiteContainer h2 {
-                    font-size:20px;
+                    font-size:24px;
+                    line-height:36px;
                     text-align:center;
+                    font-family: 'Montez', cursive;
+                    color: #BCA898;
                 }
 
 #footer {
