@@ -38,14 +38,39 @@
           </div>
           <!-- Responsive calendar - END -->
             
-          <div class="col-xs-6" id="appointmentCard" ng-show="datePicked">
+          <div class="col-xs-6" ng-show="datePicked">
               <h2 ng-bind="instructions"></h2>
-              
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                      <select class="form-control">
+                          <option>7 am</option>
+                          <option>8 am</option>
+                          <option>9 am</option>
+                          <option>10 am</option>
+                          <option>11 am</option>
+                          <option>12 pm</option>
+                          <option>1 pm</option>
+                          <option>2 pm</option>
+                          <option>3 pm</option>
+                          <option>4 pm</option>
+                          <option>5 pm</option>
+                          <option>6 pm</option>
+                          <option>7 pm</option>
+                      </select>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                      <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox1" value="option1"> I need pickup service
+                      </label>
+                  </div>
+              </div>
           </div>
             
-          <div class="col-xs-6" id="appointmentCard" ng-show="datePicked">
-              <h2>Appointment Card</h2>
-              <p>Date: <span ng-bind="appointment.month"></span>-<span ng-bind="appointment.day"></span>-<span ng-bind="appointment.year"></span></p>
+          <div class="col-xs-6" id="appointmentMeta" ng-show="datePicked">
+              <div class="appointmentCard">
+                  <h2>Appointment Card</h2>
+              	<p>Date: <span ng-bind="appointment.month"></span>-<span ng-bind="appointment.day"></span>-<span ng-bind="appointment.year"></span></p>
+              </div>
           </div>
             
         </div>

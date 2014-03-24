@@ -92,15 +92,29 @@
     background-color:#DEE8E7;
 }
 
-#appointment #appointmentCard {
-    background-color:#ffffff;
+#appointment #appointmentMeta {
     padding:20px;
 }
 
-    #appointment #appointmentCard h2 {
+    #appointment #appointmentMeta h2 {
         text-align:left;
         margin:0;
     }
+
+	#appointment #appointmentMeta p {
+        font-weight:700;
+    }
+
+		#appointment #appointmentMeta .appointmentCard {
+            background-color:#fff;
+            padding:30px;
+            box-shadow:1px 1px 1px 2px #ccc;
+        }
+
+		#appointment #appointmentMeta .appointmentCard h2 {
+            border-bottom:1px solid #A1C1BE;
+            margin-bottom:10px;
+        }
 
 
 
