@@ -30,7 +30,11 @@ barkshack.config(function($routeProvider){
     })
     .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
+        controller: ''
+    })
+    .when('/appointment', {
+        templateUrl: 'views/appointment.html',
+        controller: 'AppointmentCtrl'
     })
       .otherwise({
         redirectTo: '/'

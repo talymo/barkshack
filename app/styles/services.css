@@ -1,11 +1,22 @@
-#tealContainer #whiteContainer .mobile-buttons {
-           display: block;  
-        }
+#whiteContainer {
+    position:relative;
+}
+
+    #whiteContainer .appointment {
+        position:absolute;
+        right:-15px;
+        top:-15px;
+    }
+
+    #tealContainer #whiteContainer .mobile-buttons {
+        display: block;  
+    }
 
     #whiteContainer .mobile-buttons .mobile-btn {
-               display: block; 
-               padding:10px; 
-            }
+        display: block; 
+        padding:10px; 
+    }
+
         .mobile-buttons .mobile-btn .full-btn {
            width: 80% 
         }

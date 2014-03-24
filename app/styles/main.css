@@ -54,6 +54,11 @@ body {
         padding-bottom:10px;
     }
 
+    .navbar .container {
+        position:relative;
+    }
+
+    
         .navbar .nav {
             margin-top:40px;
         }

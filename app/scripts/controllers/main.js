@@ -60,3 +60,31 @@ barkshack.controller('GalleryCtrl', function($scope, $http, instagrams) {
         
 	});
 });
+
+barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
+    
+    $scope.datePicked = false;
+    $scope.instructions = '';
+    $scope.date = '';
+    
+    $(".responsive-calendar").responsiveCalendar({
+        time: '2014-03',
+        events: {}
+    });
+    
+    
+    
+    $('.days').on('click', '.day a', function(e) {
+        var currentDay = e.target;
+        var day = $(currentDay).attr('data-day');
+        var month = $(currentDay).attr('data-month');
+        var year = $(currentDay).attr('data-year');
+        
+        $scope.datePicked = true;
+        $scope.instructions = 'Select a time';
+        
+        
+        $scope.$apply();
+    });
+    
+});
