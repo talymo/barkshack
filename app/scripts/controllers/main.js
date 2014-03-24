@@ -65,7 +65,20 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
     
     $scope.datePicked = false;
     $scope.instructions = '';
-    $scope.date = '';
+    $scope.appointment = {
+        'month': '',
+        'day': '',
+        'year': '',
+        'time': '',
+        'service': '',
+        'pickup': false,
+        'name': '',
+        'email': '',
+        'phone': ''
+    };
+    $scope.month = '';
+    $scope.day = '';
+    $scope.year = '';
     
     $(".responsive-calendar").responsiveCalendar({
         time: '2014-03',
@@ -76,15 +89,22 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
     
     $('.days').on('click', '.day a', function(e) {
         var currentDay = e.target;
-        var day = $(currentDay).attr('data-day');
-        var month = $(currentDay).attr('data-month');
-        var year = $(currentDay).attr('data-year');
         
-        $scope.datePicked = true;
-        $scope.instructions = 'Select a time';
+        var isPast = $(currentDay).parent().hasClass('past');
         
-        
-        $scope.$apply();
+        if(!isPast){
+            console.log($scope.appointment.day);
+
+            $scope.datePicked = true;
+            $scope.instructions = 'Select a time';
+            $scope.appointment.day = $(currentDay).attr('data-day');
+            $scope.appointment.month = $(currentDay).attr('data-month');
+            $scope.appointment.year = $(currentDay).attr('data-year');
+
+
+            $scope.$apply();
+        }
+       
     });
     
 });

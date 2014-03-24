@@ -13,7 +13,7 @@
             </div>
             
             <div class="col-xs-12">
-                <h2>Select a date, select a service and then provide us with your contact info to book an appointment.</h2>
+                <h2>Select a date to begin booking your appointment.</h2>
             </div>
             
             <!-- Responsive calendar - START -->
@@ -38,8 +38,14 @@
           </div>
           <!-- Responsive calendar - END -->
             
-          <div class="col-xs-12" id="appointmentCard" ng-show="datePicked">
+          <div class="col-xs-6" id="appointmentCard" ng-show="datePicked">
               <h2 ng-bind="instructions"></h2>
+              
+          </div>
+            
+          <div class="col-xs-6" id="appointmentCard" ng-show="datePicked">
+              <h2>Appointment Card</h2>
+              <p>Date: <span ng-bind="appointment.month"></span>-<span ng-bind="appointment.day"></span>-<span ng-bind="appointment.year"></span></p>
           </div>
             
         </div>
