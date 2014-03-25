@@ -96,8 +96,8 @@
     padding:20px;
 }
 
-    #appointment #appointmentMeta h2 {
-        text-align:left;
+    #appointment #whiteContainer h2 {
+        text-align:center;
         margin:0;
     }
 
@@ -114,7 +114,48 @@
 		#appointment #appointmentMeta .appointmentCard h2 {
             border-bottom:1px solid #A1C1BE;
             margin-bottom:10px;
+            padding-bottom:10px;
         }
+
+        .checkbox-inline {
+            margin-left:10px;
+            color:#7F6B5B;
+        }
+
+            .checkbox-inline input {
+                margin-top:2px;
+            }
+
+            #appointment select {
+                margin-bottom:10px;
+            }
+
+    #appointment #appointmentMeta p span {
+        color:#A1C1BE;
+    }
+
+    #appointment #addressStuff input,
+    #appointment #contactStuff input {
+        margin-top:10px;
+    }
+
+        
+
+@media(min-width:768px){
+    .checkbox-inline {
+        margin-left:0;
+    }
+    
+    
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1120px){
+    
+}
 
 
 

@@ -38,11 +38,11 @@
           </div>
           <!-- Responsive calendar - END -->
             
-          <div class="col-xs-6" ng-show="datePicked">
+          <div class="col-xs-12 col-sm-6 col-md-6" ng-show="datePicked">
               <h2 ng-bind="instructions"></h2>
               <div class="row">
-                  <div class="col-xs-12 col-sm-6">
-                      <select class="form-control">
+                  <div class="col-xs-12 col-sm-12 col-md-4">
+                      <select class="form-control" ng-model="appointment.time">
                           <option>7 am</option>
                           <option>8 am</option>
                           <option>9 am</option>
@@ -58,18 +58,62 @@
                           <option>7 pm</option>
                       </select>
                   </div>
-                  <div class="col-xs-12 col-sm-6">
+                  <div class="col-xs-12 col-sm-12 col-md-8">
                       <label class="checkbox-inline">
-                          <input type="checkbox" id="inlineCheckbox1" value="option1"> I need pickup service
+                          <input type="checkbox" id="inlineCheckbox1" value="option1" ng-model="appointment.pickup" ng-true-value="Yes" ng-false-value="No"> Pickup or Delivery service
                       </label>
+                  </div>
+                  <div class="col-xs-12" id="contactStuff" ng-show="appointment.time">
+                      <input type="text" class="form-control" placeholder="First and Last Name" ng-model="appointment.name">
+                      <input type="tel" class="form-control" placeholder="Phone Number" ng-model="appointment.phone">
+                      <input type="email" class="form-control" placeholder="Email Address" ng-model="appointment.email">
+                  </div>
+                  <div class="col-xs-12" id="addressStuff" ng-show="appointment.pickup">
+                      <input type="text" class="form-control" placeholder="Provide your full address" ng-model="appointment.address">
+                      <input type="text" class="form-control" placeholder="Apartment number or gate code" ng-model="appointment.moreInfo">
+                  </div>
+                  <div class="col-xs-12">
+                      <select>
+                        <optgroup label="Boarding">
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                        </optgroup>
+                        <optgroup label="Grooming">
+                            <option>Item 1</option>
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                        </optgroup>
+                    </select>
                   </div>
               </div>
           </div>
             
-          <div class="col-xs-6" id="appointmentMeta" ng-show="datePicked">
+          <div class="col-xs-12 col-sm-6 col-md-6" id="appointmentMeta" ng-show="datePicked">
               <div class="appointmentCard">
-                  <h2>Appointment Card</h2>
-              	<p>Date: <span ng-bind="appointment.month"></span>-<span ng-bind="appointment.day"></span>-<span ng-bind="appointment.year"></span></p>
+                <h2>Appointment Card</h2>
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-6">
+                          <p>Date: <span ng-bind="appointment.month"></span><span>-<span ng-bind="appointment.day"></span><span>-</span><span ng-bind="appointment.year"></span></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                          <p>Time: <span ng-bind="appointment.time"></span></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                          <p>Pickup: <span ng-bind="appointment.pickup"></span></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                          <p>Delivery: <span ng-bind="appointment.delivery"></span></p>
+                      </div>
+                      <div class="col-xs-12" ng-show="appointment.time">
+                          <p>Name: <span ng-bind="appointment.name"></span></p>
+                          <p>Phone: <span ng-bind="appointment.phone"></span></p>
+                          <p>Email: <span ng-bind="appointment.email"></span></p>
+                      </div>
+                      <div class="col-xs-12" ng-show="appointment.pickup">
+                          <p>Address: <span ng-bind="appointment.address"></span></p>
+                          <p>More Info: <span ng-bind="appointment.moreInfo"></span></p>
+                      </div>
+                  </div>
               </div>
           </div>
             
