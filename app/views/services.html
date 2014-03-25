@@ -10,37 +10,21 @@
                     The Bark Shack offers Boarding, Grooming, Daycare, and Home Pet Sitting.
                 </p>
                 
-                <!--desktop buttons-->
-                <div class="btn-group btn-group-justified desktop-buttons">
-                  <div id="boarding" class="btn-group desktop-btn">
-                    <button type="button" class="btn btn-default"data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Boarding</button>
-                  </div>
-                  
-                  <div id="grooming" class="btn-group desktop-btn">
-                    <button type="button" class="btn btn-default"data-toggle="collapse" data-parent="#grooming" href="#collapseTwo">Grooming</button>
-                  </div>
-                  <div id="additional" class="btn-group desktop-btn">
-                    <button type="button" class="btn btn-default"data-toggle="collapse" data-parent="#additional" href="#collapseThree">Additional</button>
-                  </div>
-               </div>
+                  <ul class="nav nav-tabs">
+                      <li class="active"><a href="#boarding" data-toggle="tab">Boarding</a></li>
+                      <li><a href="#grooming" data-toggle="tab">Grooming</a></li>
+                      <li><a href="#additional" data-toggle="tab">Additional</a></li>
+                      
+                  </ul>
+               
               
-                <!--mobile buttons-->
-                <div class="btn-group-vertical mobile-buttons">
-                    <div id="boarding" class="btn-group mobile-btn">
-                    <button type="button" class="btn-lg btn-default full-btn" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Boarding</button>
-                  </div>
-                    
-                  <div id="grooming" class="btn-group mobile-btn" data-toggle="collapse" data-parent="#grooming" href="#collapseTwo">
-                    <button type="button" class="btn-lg btn-default full-btn">Grooming</button>
-                  </div>
-                  <div id="additional" class="btn-group mobile-btn">
-                    <button type="button" class="btn-lg btn-default full-btn" data-toggle="collapse" data-parent="#additional" href="#collapseThree">Additional</button>
-                  </div>
-                </div>
+               
+            
+            
                 
-                <!--Content-->
-                <div id="collapseOne" class="panel-collapse collapse">
-                  <div class="panel-body">
+                <!--Boarding-->
+                <div class="tab-content">
+                  <div id="boarding" class="tab-pane fade in active">
                        <div class="row">
                            <div class="col-xs-4">
                                <h3>Guest Boarding</h3>
@@ -108,16 +92,17 @@
                       
                       
                   </div>
-                    </div>
+                    
+                <!--Grooming-->
                 
-                <div id="collapseTwo" class="panel-collapse collapse">
-                  <div class="panel-body">
+                  <div id="grooming" class="tab-pane fade in">
                        Grooming
                   </div>
-                    </div>
                     
-                <div id="collapseThree" class="panel-collapse collapse">
-                  <div class="row">
+                 <!--Additional-->   
+                <div id="additional" class="tab-pane fade in">
+                  
+                      <div class="row">
                            <div class="col-xs-4">
                                <h3>Warm Bath</h3>
                                <p>For Small Doggies.</p>
@@ -227,9 +212,10 @@
                 
             </div>
         </div>       
-    </div>    
+    </div>
+    </div>
 
-<script src="scripts/services-page.js"></script>
+
 
 
 

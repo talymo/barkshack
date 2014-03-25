@@ -8,26 +8,7 @@
         top:-15px;
     }
 
-    #tealContainer #whiteContainer .mobile-buttons {
-        display: block;  
-    }
-
-    #whiteContainer .mobile-buttons .mobile-btn {
-        display: block; 
-        padding:10px; 
-    }
-
-        .mobile-buttons .mobile-btn .full-btn {
-           width: 80% 
-        }
-
-#tealContainer #whiteContainer .desktop-buttons {
-           display: none; 
-        }
-
-#whiteContainer .desktop-buttons .desktop-btn {
-           padding: 10px;  
-        }
+    
 
 #tealContainer .services {
     padding: 15px 10px;
@@ -40,11 +21,5 @@
 /*Tablet*/
 @media(min-width:768px){
  
-        #tealContainer #whiteContainer .mobile-buttons {
-            display: none;    
-        }
-    
-        #tealContainer #whiteContainer .desktop-buttons {
-           display: block; 
-        }
+       
 }
