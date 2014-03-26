@@ -107,14 +107,18 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
        
     });
     
-    if($scope.appointment.day && $scope.appointment.month && $scope.appointment.year && $scope.appointment.time && $scope.appointment.service && $scope.appointment.name && $scope.appointment.phone && $scope.appointment.email) {
-        if($scope.appointment.pickup == 'Yes') {
-            if($scope.appointment.address) {
+    $scope.checkForm = function() {
+        console.log('hit');
+        if($scope.appointment.day && $scope.appointment.month && $scope.appointment.year && $scope.appointment.time && $scope.appointment.service && $scope.appointment.name && $scope.appointment.phone && $scope.appointment.email) {
+            if($scope.appointment.pickup == 'Yes') {
+                if($scope.appointment.address) {
+                    console.log('good to go');
+                }
+            } else {
                 console.log('good to go');
             }
-        } else {
-            console.log('good to go');
-        }
-    } 
+        }   
+    };
+    
     
 });
