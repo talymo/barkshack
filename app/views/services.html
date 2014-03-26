@@ -2,27 +2,20 @@
     
         <div class="col-xs-12" id="tealContainer">
         
-        <div class="row services" id="whiteContainer">
-            <div class="appointment">
-                <a href="#/appointment"><img src="images/appointment.png" /></a>
-            </div>
-                <p class="largeContent">
+            <div class="row services" id="whiteContainer">
+                <div class="appointment">
+                    <a href="#/appointment"><img src="images/appointment.png" /></a>
+                </div>
+                <h2 class="largeContent">
                     The Bark Shack offers Boarding, Grooming, Daycare, and Home Pet Sitting.
-                </p>
-                
-                  <ul class="nav nav-tabs">
-                      <li class="active"><a href="#boarding" data-toggle="tab">Boarding</a></li>
-                      <li><a href="#grooming" data-toggle="tab">Grooming</a></li>
-                      <li><a href="#additional" data-toggle="tab">Additional</a></li>
-                      
-                  </ul>
+                </h2>
+                <ul class="nav nav-tabs">
+                      <li class="active"><a class="services-tab" href="#boarding" data-toggle="tab">Boarding</a></li>
+                      <li><a class="services-tab" href="#grooming" data-toggle="tab">Grooming</a></li>
+                      <li><a class="services-tab" href="#additional" data-toggle="tab">Additional</a></li>
+                </ul>
                
-              
-               
-            
-            
-                
-                <!--Boarding-->
+               <!--Boarding-->
                 <div class="tab-content">
                   <div id="boarding" class="tab-pane fade in active">
                        <div class="row">
@@ -97,14 +90,32 @@
                 
                   <div id="grooming" class="tab-pane fade in">
                        <div class="row">
-                           <div class="col-sm-6 circleContainer">
-                               <div id="circle">dogs</div>
+                           <div class="col-xs-6 circleContainer" id="accordian">
+                               <div id="circle" class="dog" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></div>
                            </div>
-                           <div class="col-sm-6 circleContainer">
-                               <div id="circle">cat</div>
+                           <div class="col-xs-6 circleContainer">
+                               <div id="circle" class="cat" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"></div>
+                           </div>
+                           
+                           <div class="row"> 
+                               <div id="collapseOne" class="panel-collapse collapse col-xs-12 ">
+					               <div class="panel-body">
+							        Dog Grooming Info
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="row"> 
+                               <div id="collapseTwo" class="panel-collapse collapse col-xs-12 ">
+					               <div class="panel-body">
+							        Cat Grooming Info.
+						           </div>
+                               </div>
                            </div>
                       </div>
                   </div>
+                    
+                   
                     
                  <!--Additional-->   
                 <div id="additional" class="tab-pane fade in">
@@ -215,12 +226,24 @@
                        </div>
                     
                     </div>
-                
-                
-            </div>
+             </div>
         </div>       
     </div>
     </div>
+
+
+<!--These scripts will move, these are for the 'grooming' tab-->
+
+<script>
+$( ".dog" ).click(function() {
+  $( ".cat" ).fadeToggle( "slow", "linear" );
+    
+});
+    
+    $( ".cat" ).click(function() {
+  $( ".dog" ).fadeToggle( "slow", "linear" );
+});
+    </script>
 
 
 
