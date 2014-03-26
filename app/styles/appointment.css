@@ -139,12 +139,33 @@
         margin-top:10px;
     }
 
+    #appointment #appointmentMeta .btn-primary{
+        border-radius:0;
+        height:45px;
+        margin-top:20px;
+    }
+
+    #appointment #pickup {
+        margin-top:5px;
+    }
+
+    #appointment #whiteContainer h2.marginTop {
+        margin-top:20px;
+    }
+
         
 
 @media(min-width:768px){
     .checkbox-inline {
         margin-left:0;
     }
+    
+    
+    
+    .marginTop {
+        margin-top:20px;
+    }
+    
     
     
 }

@@ -65,6 +65,7 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
     
     $scope.datePicked = false;
     $scope.instructions = '';
+    $scope.showConfirm = 'disabled';
     $scope.appointment = {
         'month': '',
         'day': '',
@@ -72,12 +73,12 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
         'time': '',
         'service': '',
         'pickup': 'No',
-        'delivery': 'No',
         'address': '',
         'moreInfo': '',
         'name': '',
         'email': '',
-        'phone': ''
+        'phone': '',
+        'message': ''
     };
     
     $(".responsive-calendar").responsiveCalendar({
@@ -105,5 +106,15 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
         }
        
     });
+    
+    if($scope.appointment.day && $scope.appointment.month && $scope.appointment.year && $scope.appointment.time && $scope.appointment.service && $scope.appointment.name && $scope.appointment.phone && $scope.appointment.email) {
+        if($scope.appointment.pickup == 'Yes') {
+            if($scope.appointment.address) {
+                console.log('good to go');
+            }
+        } else {
+            console.log('good to go');
+        }
+    } 
     
 });
