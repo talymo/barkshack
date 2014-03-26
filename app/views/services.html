@@ -234,11 +234,13 @@
 <!--These scripts will move, these are for the 'grooming' tab-->
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script>
+    
+    
 $( ".dog" ).click(function() {
-    $( ".cat" ).fadeToggle( "slow", "linear",
-    function() { $(".circleContainer").toggleClass( "dogWideContainer", 1000, "easeInOutCubic");
-}); 
-
+    $( ".cat" ).fadeToggle( "slow", "linear", function() { 
+        $(".circleContainer").toggleClass( "dogWideContainer", 1000, "easeInOutCubic");
+        $(".dog").addClass('active');
+    }); 
 });
     
     
@@ -247,8 +249,10 @@ $( ".dog" ).click(function() {
     
         
     
-    $( ".cat" ).click(function() {
-    $( ".dog" ).fadeToggle( "slow", "linear",
-    function() { $(".circleContainer").toggleClass( "catWideContainer", 1000, "easeInOutCubic");
-}); });
+$( ".cat" ).click(function() {
+    $( ".dog" ).fadeToggle( "slow", "linear", function() { 
+        $(".circleContainer").toggleClass( "catWideContainer", 1000, "easeInOutCubic");
+        $(".cat").addClass('active');
+	}); 
+});
     </script>
