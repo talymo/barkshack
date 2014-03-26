@@ -82,8 +82,7 @@
                                <h3>$65</h3>
                            </div>
                        </div>
-                      
-                      
+                        
                   </div>
                     
                 <!--Grooming-->
@@ -91,25 +90,25 @@
                   <div id="grooming" class="tab-pane fade in">
                        <div class="row">
                            <div class="col-xs-6 circleContainer" id="accordian">
-                               <div id="circle" class="dog" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></div>
+                               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzT783FE4a9yuogychzxsdYoAW4dBoj20rBqfatLLWtEo331ye" id="circle" class="dog img-rounded img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                            </div>
                            <div class="col-xs-6 circleContainer">
-                               <div id="circle" class="cat" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"></div>
+                               <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSNMyAKu4UBv1KkNamUptSDAVewdBOLAwy9CI2PJmL78XG89O-L" id="circle" class="cat img-rounded img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                            </div>
                            
                            <div class="row"> 
                                <div id="collapseOne" class="panel-collapse collapse col-xs-12 ">
-					               <div class="panel-body">
-							        Dog Grooming Info
+                                   <div class="panel-body">
+                                    Dog Grooming Info
                                    </div>
                                </div>
                            </div>
                            
                            <div class="row"> 
                                <div id="collapseTwo" class="panel-collapse collapse col-xs-12 ">
-					               <div class="panel-body">
-							        Cat Grooming Info.
-						           </div>
+                                   <div class="panel-body">
+                                    Cat Grooming Info.
+                                   </div>
                                </div>
                            </div>
                       </div>
@@ -233,19 +232,23 @@
 
 
 <!--These scripts will move, these are for the 'grooming' tab-->
-
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script>
 $( ".dog" ).click(function() {
-  $( ".cat" ).fadeToggle( "slow", "linear" );
-    
+    $( ".cat" ).fadeToggle( "slow", "linear",
+    function() { $(".circleContainer").toggleClass( "dogWideContainer", 1000, "easeInOutCubic");
+}); 
+
 });
+    
+    
+    
+    
+    
+        
     
     $( ".cat" ).click(function() {
-  $( ".dog" ).fadeToggle( "slow", "linear" );
-});
+    $( ".dog" ).fadeToggle( "slow", "linear",
+    function() { $(".circleContainer").toggleClass( "catWideContainer", 1000, "easeInOutCubic");
+}); });
     </script>
-
-
-
-
-
