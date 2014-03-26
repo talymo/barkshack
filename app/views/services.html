@@ -237,22 +237,44 @@
     
     
 $( ".dog" ).click(function() {
-    $( ".cat" ).fadeToggle( "slow", "linear", function() { 
-        $(".circleContainer").toggleClass( "dogWideContainer", 1000, "easeInOutCubic");
-        $(".dog").addClass('active');
+    
+    
+    var isActive = ($(this).hasClass('isActive'));
+    
+    
+    if (isActive) {
+    $(".circleContainer").toggleClass( "dogWideContainer", 1000, "easeInOutCubic", function() { 
+        $( ".cat" ).fadeIn( "slow", "linear");
+        $(".dog").removeClass('isActive'); 
     }); 
+  }
+    else {
+        $( ".cat" ).fadeOut( "slow", "linear", function() { 
+        $(".circleContainer").toggleClass( "dogWideContainer", 1000, "easeInOutCubic");
+        $(".dog").addClass('isActive');
+     });
+  }
 });
-    
-    
-    
-    
-    
+     
         
     
 $( ".cat" ).click(function() {
-    $( ".dog" ).fadeToggle( "slow", "linear", function() { 
+    
+    
+    var isActive = ($(this).hasClass('isActive'));
+    
+    
+    if (isActive) {
+    $(".circleContainer").toggleClass( "catWideContainer", 1000, "easeInOutCubic", function() { 
+        $( ".dog" ).fadeIn( "slow", "linear");
+        $(".cat").removeClass('isActive'); 
+    }); 
+  }
+    else {
+        $( ".dog" ).fadeOut( "slow", "linear", function() { 
         $(".circleContainer").toggleClass( "catWideContainer", 1000, "easeInOutCubic");
-        $(".cat").addClass('active');
-	}); 
+        $(".cat").addClass('isActive');
+     });
+  }
 });
     </script>
