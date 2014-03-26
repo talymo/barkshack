@@ -15,6 +15,35 @@
     text-align: center;
 }
 
+#grooming .circleContainer {
+    text-align:center;
+    
+}
+
+     #grooming .circleContainer #circle {
+        background-color: #A1C1BE;
+        border: 1px solid #8E887D;
+        border-radius: 100px;
+        margin-top:100px;
+        margin-bottom:100px;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        padding-top:83px;
+    }
+
+#grooming .circleContainer #circle:hover {
+        background-color: #A1C1BE;
+        border: 3px solid #8E887D;
+        border-radius: 100px;
+        margin-top:100px;
+        margin-bottom:100px;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        padding-top:83px;
+    }
+
 
 
 
