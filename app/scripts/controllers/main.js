@@ -115,10 +115,55 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
                     console.log('good to go');
                 }
             } else {
-                console.log('good to go');
+                
             }
         }   
     };
     
+   
+    
     
 });
+
+barkshack.controller('groomingCtrl', function ($scope) {
+
+        $scope.dogSelection = function () {
+
+            var isActive = ($('.dog').hasClass('isActive'));
+
+
+            if (isActive) {
+                $(".circleContainer").toggleClass("dogWideContainer", 1000, "easeInOutCubic", function () {
+                    $(".cat").fadeIn("slow", "linear");
+                    $(".dog").removeClass('isActive');
+                });
+            } else {
+                $(".cat").fadeOut("slow", "linear", function () {
+                    $(".circleContainer").toggleClass("dogWideContainer", 1000, "easeInOutCubic");
+                    $(".dog").addClass('isActive');
+                });
+            }
+
+
+        }
+
+        $scope.catSelection = function () {
+            var isActive = ($('.cat').hasClass('isActive'));
+
+
+            if (isActive) {
+                $(".circleContainer").toggleClass("catWideContainer", 1000, "easeInOutCubic", function () {
+                    $(".dog").fadeIn("slow", "linear");
+                    $(".cat").removeClass('isActive');
+                });
+            } else {
+                $(".dog").fadeOut("slow", "linear", function () {
+                    $(".circleContainer").toggleClass("catWideContainer", 1000, "easeInOutCubic");
+                    $(".cat").addClass('isActive');
+                });
+            }
+        
+
+};
+    });
+
