@@ -1,0 +1,116 @@
+#tealContainer .services {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+#tealContainer #whiteContainer {
+    position:relative;
+}
+
+    .container #whiteContainer .appointment {
+        position:absolute;
+        right:-15px;
+        top:-15px;
+    }
+
+        .container #whiteContainer .services-tab {
+    
+            font-size: 20px;
+            color: #7F6B5B;
+            padding-bottom: 10px;
+
+        }
+
+        .container #whiteContainer h2 {
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            font-family: 'Montez', cursive;
+            color: #BCA898;
+        }
+
+        .container #whiteContainer .services-tab {
+            font-size: 14px;
+            color: #7F6B5B;
+            padding-bottom: 10px;
+            }
+
+            #grooming .circleContainer {
+                text-align:center;
+
+            }
+
+            #grooming .dogWideContainer {
+                width: 100%;
+
+            }
+
+            #grooming .catWideContainer {
+                width: 33%;
+
+            }
+            
+            #grooming .circleContainer #circle {
+                border: 1px solid #8E887D;
+                border: 3px solid transparent;
+                margin-top:100px;
+                margin-bottom:100px;
+                height: 125px;
+                width: 175px;
+                display: inline-block;
+
+                }                                                                                                                            
+
+    
+
+#grooming .circleContainer #circle:hover {
+       
+        border: 3px solid  #8E887D;
+          
+    }
+
+
+
+
+@media(min-width:768px){
+    
+    #grooming .circleContainer #circle {
+                border: 1px solid #8E887D;
+                border: 3px solid transparent;
+                margin-top:100px;
+                margin-bottom:100px;
+                height: 250px;
+                width: 300px;
+                display: inline-block;
+
+                }  
+    
+  .container #whiteContainer h2 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    font-family: 'Montez', cursive;
+    color: #BCA898;
+      
+  }
+    
+    .container #whiteContainer .services-tab {
+font-size: 20px;
+color: #7F6B5B;
+padding-bottom: 10px;
+}
+    
+    #grooming .circleContainer #circle {
+                border: 1px solid #8E887D;
+                border: 3px solid transparent;
+                margin-top:100px;
+                margin-bottom:100px;
+                height: 250px;
+                width: 300px;
+                display: inline-block;
+
+                }  
+    
+    
+
+}

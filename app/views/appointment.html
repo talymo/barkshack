@@ -1,0 +1,139 @@
+<div class="row" id="appointment">
+    
+    <div class="col-xs-12" id="tealContainer">
+        
+        <div class="row" id="whiteContainer">
+            
+            <div class="col-xs-12 visible-xs">
+                <span class="divider">
+                    <span>
+                        Book an Appointment
+                    </span>
+                </span>
+            </div>
+            
+            <div class="col-xs-12">
+                <h2>Select a date to begin booking your appointment.</h2>
+            </div>
+            
+            <!-- Responsive calendar - START -->
+            <div class="responsive-calendar col-xs-12">
+            <div class="controls">
+                <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+                <h4><span data-head-year></span> <span data-head-month></span></h4>
+                <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+            </div><hr/>
+            <div class="day-headers">
+              <div class="day header">Mon</div>
+              <div class="day header">Tue</div>
+              <div class="day header">Wed</div>
+              <div class="day header">Thu</div>
+              <div class="day header">Fri</div>
+              <div class="day header">Sat</div>
+              <div class="day header">Sun</div>
+            </div>
+            <div class="days" data-group="days">
+
+            </div>
+          </div>
+          <!-- Responsive calendar - END -->
+            
+          <div class="col-xs-12 col-sm-5" ng-show="datePicked">
+              <h2 ng-bind="instructions"></h2>
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-4">
+                      <select class="form-control" ng-model="appointment.time">
+                          <option>7 am</option>
+                          <option>8 am</option>
+                          <option>9 am</option>
+                          <option>10 am</option>
+                          <option>11 am</option>
+                          <option>12 pm</option>
+                          <option>1 pm</option>
+                          <option>2 pm</option>
+                          <option>3 pm</option>
+                          <option>4 pm</option>
+                          <option>5 pm</option>
+                          <option>6 pm</option>
+                          <option>7 pm</option>
+                      </select>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8" id="pickup">
+                      <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox1" value="option1" ng-model="appointment.pickup" ng-true-value="Yes" ng-false-value="No"> Pickup / Delivery service
+                      </label>
+                  </div>
+                  <div class="col-xs-12" id="contactStuff" ng-show="appointment.time">
+                      <input type="text" class="form-control" placeholder="First and Last Name" ng-model="appointment.name">
+                      <input type="tel" class="form-control" placeholder="Phone Number" ng-model="appointment.phone">
+                      <input type="email" class="form-control" placeholder="Email Address" ng-model="appointment.email">
+                  </div>
+                  <div class="col-xs-12" id="addressStuff" ng-show="appointment.pickup">
+                      <input type="text" class="form-control" placeholder="Provide your full address" ng-model="appointment.address">
+                      <input type="text" class="form-control" placeholder="Apartment number or gate code" ng-model="appointment.moreInfo">
+                  </div>
+                  <div class="col-xs-12">
+                      <h2 class="marginTop">Select a service</h2>
+                      <select class="form-control" ng-model="appointment.service">
+                        <optgroup label="Boarding">
+                            <option>Dog Boarding</option>
+                            <option>Cat Boarding</option>
+                            <option>Bird, Bunny or Hamster Boarding</option>
+                            <option>Home Pet Care</option>
+                            <option>Overnight Home Pet Care</option>
+                        </optgroup>
+                        <optgroup label="Grooming">
+                            <option>Bath (small dog)/option>
+                            <option>Bath (large dog)/option>
+                            <option>Nail Trim</option>
+                        </optgroup>
+                    </select>
+                  </div>
+                  <div class="col-xs-12" ng-show="appointment.service">
+                      <textarea class="form-control" rows="5" placeholder="Anything you would like to tell us?" ng-model="appointment.message"></textarea>
+                  </div>
+              </div>
+          </div>
+            
+          <div class="col-xs-12 col-sm-7 col-md-6" id="appointmentMeta" ng-show="datePicked">
+              <div class="appointmentCard">
+                <h2>Appointment Card</h2>
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-6">
+                          <p>Date*: <span ng-bind="appointment.month"></span><span>-<span ng-bind="appointment.day"></span><span>-</span><span ng-bind="appointment.year"></span></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-6">
+                          <p>Time*: <span ng-bind="appointment.time"></span></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-12">
+                          <p>Pickup / Delivery: <span ng-bind="appointment.pickup"></span></p>
+                      </div>
+                      <div class="col-xs-12 marginTop" ng-show="appointment.time">
+                          <p>Name*: <span ng-bind="appointment.name"></span></p>
+                          <p>Phone*: <span ng-bind="appointment.phone"></span></p>
+                          <p>Email*: <span ng-bind="appointment.email"></span></p>
+                      </div>
+                      <div class="col-xs-12" ng-show="appointment.pickup">
+                          <p>Address*: <span ng-bind="appointment.address"></span></p>
+                          <p>More Info: <span ng-bind="appointment.moreInfo"></span></p>
+                      </div>
+                      <div class="col-xs-12">
+                          <p>Service*: <span ng-bind="appointment.service"></span></p>
+                      </div>
+                      <div class="col-xs-12" ng-show="appointment.message">
+                          <p>Message: <span ng-bind="appointment.message"></span></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-12">
+                      <button class="form-control btn btn-primary btn-lg" ng-click="checkForm()">
+                          Confirm Appointment
+                      </button>
+                  </div>
+              </div>
+          </div>
+            
+        </div>
+        
+    </div>
