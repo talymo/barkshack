@@ -10,10 +10,16 @@
         text-align:center;
         line-height:28px;
         font-size:16px;
+        color:#4D2F15;
     }
 
-#faqs .questions {
+    #faqs .questions {
         margin-top:20px;
+    }
+
+    #faqs .panel-default > .panel-heading {
+        background-color:#fff;
+        cursor:pointer;
     }
 
 
