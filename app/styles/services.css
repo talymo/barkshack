@@ -1,6 +1,5 @@
 #tealContainer .services {
     padding: 15px 10px;
-    text-align: center;
 }
 
 #tealContainer #whiteContainer {
@@ -32,9 +31,19 @@
         .container #whiteContainer .services-tab {
             font-size: 14px;
             color: #7F6B5B;
-            padding-bottom: 10px;
-            }
+            padding: 10px;
+        }
 
+
+            .tab-content > .active {
+                background-color: #FFFFFF;
+                border-bottom: 1px solid #CCCCCC;
+                border-left: 1px solid #CCCCCC;
+                border-right: 1px solid #CCCCCC;
+                display: block;
+                padding:20px;
+            }
+        
             #grooming .circleContainer {
                 text-align:center;
 
@@ -57,9 +66,86 @@
                 margin-bottom:100px;
                 height: 125px;
                 width: 175px;
-                display: inline-block;
+                display: inline-block;            
+            }
 
-                }                                                                                                                            
+            ul.dotted {
+                padding-left:0;
+            }
+
+            ul.dotted li {
+                margin-bottom:20px;
+            }
+
+            ul.dotted li, ul.dotted div {
+                height: inherit;
+                list-style-type: none;
+            }
+
+            ul.dotted > li div {
+                float: left;
+                width: 50%;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .dotted div.item {
+                width: 80%;
+            }
+
+            .dotted div.prices {
+                width: 20%;
+                overflow: visible;
+                text-align:right;
+            }
+
+            .dotted div.item, .dotted div.prices {
+                height: 20px;
+                font-weight: bold;
+            }
+
+            ul.dotted span {
+                display: block;
+                position: absolute;
+                padding: 0 5px;
+            }
+
+            ul.dotted span:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 67%;
+                width: 1000px;
+                border-top: 2px dotted #000;
+            }
+
+            div.item span {
+                left: 0;
+                color:#E46866;
+            }
+
+            div.item span:after {
+                left: 100%;
+            }
+
+            div.prices span {
+                right: 0;
+                width: 80%;
+                color:#A1C1BE;
+            }
+
+            div.prices div {
+                width: 100% !important;
+            }
+
+            div.prices span:after {
+                right: 100%;
+            }
+            ul.dotted p {
+                padding: 0px 5px 0px;
+                clear: both;
+                margin-bottom: 0;
+            }
 
     
 
@@ -75,15 +161,14 @@
 @media(min-width:768px){
     
     #grooming .circleContainer #circle {
-                border: 1px solid #8E887D;
-                border: 3px solid transparent;
-                margin-top:100px;
-                margin-bottom:100px;
-                height: 250px;
-                width: 300px;
-                display: inline-block;
-
-                }  
+        border: 1px solid #8E887D;
+        border: 3px solid transparent;
+        margin-top:100px;
+        margin-bottom:100px;
+        height: 250px;
+        width: 300px;
+        display: inline-block;
+    }  
     
   .container #whiteContainer h2 {
     font-size: 24px;
@@ -95,22 +180,39 @@
   }
     
     .container #whiteContainer .services-tab {
-font-size: 20px;
-color: #7F6B5B;
-padding-bottom: 10px;
-}
+        font-size: 20px;
+        color: #7F6B5B;
+        padding-bottom: 10px;
+    }
     
     #grooming .circleContainer #circle {
-                border: 1px solid #8E887D;
-                border: 3px solid transparent;
-                margin-top:100px;
-                margin-bottom:100px;
-                height: 250px;
-                width: 300px;
-                display: inline-block;
-
-                }  
+        border: 1px solid #8E887D;
+        border: 3px solid transparent;
+        margin-top:100px;
+        margin-bottom:100px;
+        height: 250px;
+        width: 300px;
+        display: inline-block;
+    } 
     
-    
+    .dotted div.item {
+         width: 92%;
+     }
 
+    .dotted div.prices {
+        width: 8%;
+        overflow: visible;
+    } 
+
+}
+
+@media(min-width:992px){
+    
+     ul.dotted {
+        float: left;
+        padding-left: 0;
+        padding-right: 50px;
+        width: 600px;
+     }
+    
 }
