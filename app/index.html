@@ -50,7 +50,7 @@ AIzaSyB-jSI5dBK2g-TWIoZEICE5md3Bf-wu1uE&sensor=true">
       
 
       <!-- Static navbar -->
-          <div class="navbar navbar-default" role="navigation">
+          <div class="navbar navbar-default" role="navigation" ng-controller="HeaderCtrl">
             <div class="container">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -65,11 +65,11 @@ AIzaSyB-jSI5dBK2g-TWIoZEICE5md3Bf-wu1uE&sensor=true">
               </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#/about">ABOUT</a></li>
-                    <li><a href="#/services">SERVICES</a></li>
-                    <li><a href="#/gallery">GALLERY</a></li>
-                    <li><a href="#/faqs">FAQ</a></li>
-                    <li><a href="#/contact">CONTACT</a></li>
+                    <li><a ng-class="getClass('/about')" href="#/about">ABOUT</a></li>
+                    <li><a ng-class="getClass('/services')" href="#/services">SERVICES</a></li>
+                    <li><a ng-class="getClass('/gallery')" href="#/gallery">GALLERY</a></li>
+                    <li><a ng-class="getClass('/faqs')" href="#/faqs">FAQ</a></li>
+                    <li><a ng-class="getClass('/contact')" href="#/contact">CONTACT</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="social">
                     

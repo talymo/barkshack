@@ -1,5 +1,16 @@
 'use strict';
 
+barkshack.controller('HeaderCtrl', function($scope, $location) {
+    $scope.getClass = function(path) {
+        console.log($location.path().substr(0, path.length));
+        if ($location.path().substr(0, path.length) == path) {
+          return "active"
+        } else {
+          return ""
+        }
+    };
+});
+
 barkshack.controller('MainCtrl', function ($scope) {
          
     var mapDiv = $('#map').is(':visible'); 
@@ -48,7 +59,7 @@ barkshack.controller('MainCtrl', function ($scope) {
           icon: 'images/marker.png'
       });
     }
-      
+    
   });
 
 barkshack.controller('GalleryCtrl', function($scope, $http, instagrams) {
