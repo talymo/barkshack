@@ -127,43 +127,221 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
 
 barkshack.controller('groomingCtrl', function ($scope) {
 
-        $scope.dogSelection = function () {
+    $scope.breeds = {
+    "Airedale": {
+      "name": "Airedale",
+      "price": "60",
+          },
+     "Akita": {
+      "name": "Akita",
+      "price": "65",
+    },
+  "Austrailian Sheep Dog": {
+      "name": "Austrailian Sheep Dog",
+      "price": "50", 
+    },
+    "Bernese Mountain Dog": {
+      "name": "Bernese Mountain Dog",
+      "price": "65", 
+    },
+    "Bichon": {
+      "name": "Bichon",
+      "price": "50",
+    },
+    "Border Collie": {
+      "name": "Border Collie",
+      "price": "50",
+    },
+    "Border Terrier": {
+      "name": "Border Terrier",
+      "price": "45",
+    },
+    "Boykin": {
+      "name": "Boykin",
+      "price": "50",
+    },
+    "Brittany": {
+      "name": "Brittany",
+      "price": "50",
+    },
+    "Bouvier": {
+      "name": "Bouvier",
+      "price": "65",
+    },
+    "Cairn": {
+      "name": "Cairn",
+      "price": "45",
+    },
+    "Cavalier": {
+      "name": "Cavalier",
+      "price": "55",
+    },
+    "Chow": {
+      "name": "Chow",
+      "price": "60",
+    },
+    "Cockapoo": {
+      "name": "Cockapoo",
+      "price": "50",
+    },
+    "Cocker": {
+      "name": "Cocker",
+      "price": "50",
+    },
+    "Corgi": {
+      "name": "Corgi",
+      "price": "45",
+    },
+    "English Setter": {
+      "name": "English Setter",
+      "price": "50",
+    },
+    "Eskimo Spitz": {
+      "name": "Eskimo Spitz",
+      "price": "50",
+    },
+    "German Shephard": {
+      "name": "German Shephard",
+      "price": "55",
+    },
+    "Golden Retriever": {
+      "name": "Golden Retriever",
+      "price": "50",
+    },
+    "Golden Doodle": {
+      "name": "Golden Doodle",
+      "price": "65",
+    },
+    "Great Pyrenese": {
+      "name": "Great Pyrenese",
+      "price": "55",
+    },
+    "Irish Setter": {
+      "name": "Irish Setter",
+      "price": "50",
+    },
+    "Japanese Chin": {
+      "name": "Japanese Chin",
+      "price": "40",
+    },
+    "Keeshond": {
+      "name": "Keeshond",
+      "price": "50",
+    },
+    "Labrador Retriever": {
+      "name": "Labrador Retriever",
+      "price": "50",
+    },
+    "Lhasa Apso": {
+      "name": "Lhasa Apso",
+      "price": "45",
+    },
+    "Maltese": {
+      "name": "Maltese",
+      "price": "40",
+    },
+    "Newfoundland": {
+      "name": "Newfoundland",
+      "price": "65",
+    },
+    "Norfolk Terrier": {
+      "name": "Norfolk Terrier",
+      "price": "45",
+    },
+    "Old English Sheepdog": {
+      "name": "Old English Sheepdog",
+      "price": "65",
+    },
+    "Papillon": {
+      "name": "Newfoundland",
+      "price": "40",
+    },
+    "Pekignese": {
+      "name": "Pekignese",
+      "price": "45",
+    },
+    "Toy Poodle": {
+      "name": "Toy Poodle",
+      "price": "40",
+    },
+    "Miniature Poodle": {
+      "name": "Miniature Poodle",
+      "price": "40",
+    },
+    "Standard Poodle": {
+      "name": "Standard Poodle",
+      "price": "65",
+    },
+    "Samoyed": {
+      "name": "Samoyed",
+      "price": "55",
+    },
+    "Miniature Scnauzer": {
+      "name": "Miniature Scnauzer",
+      "price": "45",
+    },
+    "Standard Scnauzer": {
+      "name": "Standard Scnauzer",
+      "price": "50",
+    },
+    "Giant Scnauzer": {
+      "name": "Giant Scnauzer",
+      "price": "60",
+    },
+    "Scottish Terrier": {
+      "name": "Scottish Terrier",
+      "price": "45",
+    },
+    "Sheltie": {
+      "name": "Sheltie",
+      "price": "50",
+    },
+    "Shih Tzu": {
+      "name": "Shih Tzu",
+      "price": "45",
+    },
+    "Springer Spaniel": {
+      "name": "Springer Spaniel",
+      "price": "50",
+    },
+    "Saint Bernard": {
+      "name": "Saint Bernard",
+      "price": "65",
+    },
+    "Tibetan Terrier": {
+      "name": "Tibetan Terrier",
+      "price": "45",
+    },
+    "Welsh Terrier": {
+      "name": "Welsh Terrier",
+      "price": "45",
+    },
+    "Westie": {
+      "name": "Westie",
+      "price": "45",
+    },
+    "Wheaton Terrier": {
+      "name": "Wheaton Terrier",
+      "price": "60",
+    },
+    "Yorkie": {
+      "name": "Yorkie",
+      "price":"45",
+    },
+  };
+ 
+  $scope.currentBreed = null;
+  
+  
 
-            var isActive = ($('.dog').hasClass('isActive'));
+  $scope.setBreed = function (name) {
+    $scope.currentBreed = $scope.breeds[name];
+  };
 
-
-            if (isActive) {
-                $(".circleContainer").toggleClass("dogWideContainer", 1000, "easeInOutCubic", function () {
-                    $(".cat").fadeIn("slow", "linear");
-                    $(".dog").removeClass('isActive');
-                });
-            } else {
-                $(".cat").fadeOut("slow", "linear", function () {
-                    $(".circleContainer").toggleClass("dogWideContainer", 1000, "easeInOutCubic");
-                    $(".dog").addClass('isActive');
-                });
-            }
-
-
-        }
-
-        $scope.catSelection = function () {
-            var isActive = ($('.cat').hasClass('isActive'));
-
-
-            if (isActive) {
-                $(".circleContainer").toggleClass("catWideContainer", 1000, "easeInOutCubic", function () {
-                    $(".dog").fadeIn("slow", "linear");
-                    $(".cat").removeClass('isActive');
-                });
-            } else {
-                $(".dog").fadeOut("slow", "linear", function () {
-                    $(".circleContainer").toggleClass("catWideContainer", 1000, "easeInOutCubic");
-                    $(".cat").addClass('isActive');
-                });
-            }
-        
-
-};
+  $scope.showPrice = function (name) {
+    $scope.currentPrice = $scope.breeds[name];
+  };
+    
+    
     });
 

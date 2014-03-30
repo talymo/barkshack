@@ -88,41 +88,65 @@
                 <!--Grooming-->
                 
                   <div ng-controller="groomingCtrl" id="grooming" class="tab-pane fade in">
-                       <div class="row" id="accordian">
-                           <div class="col-xs-6 dog img-rounded img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                       <div class="row">
+                           <div class="col-xs-12 dog">
                              <h2>Dogs</h2>  
                            </div>
-                           <div class="col-xs-6 cat img-rounded img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                               <h2>Cats</h2>
-                           </div>
+                           
                        </div>
                            
                            <div class="row"> 
-                               <div id="collapseOne" class="panel-collapse collapse col-xs-12 ">
+                               <div id="collapseOne" class="col-xs-12 ">
                                    <div class="panel-body">
                                         <div class="row">
                                            <div class="col-xs-12">
-                                               <h2>What Breed is your Dog?</h2> 
+                                               
+                                               
+                                               <button class="dropdown-toggle btn-primary btn-lg" data-toggle="dropdown">Select Your Breed</button>
+						                            <ul class="dropdown-menu scrollable-menu col-md-12 col-sm-12 col-xs-12" role="menu">
+							                            <li class="breedList" ng-repeat="breed in breeds">
+								
+			  					                            <a href="" ng-click="showPrice(breed.name)">{{breed.name}}</a>
+								
+							                            </li>
+						                            </ul>
+                                               
+                                               
+                                               
+                                               
                                            </div>
                                          </div>
+                                       
+                             
+                                       
                                          <div class="row">
-                                           <div class="col-xs-12">
+                                           <div class="col-xs-4">
                                                <h2>(Select Breed)</h2>
                                             </div>
-                                         </div>
-                                       <div class="row">
-                                           <div class="col-xs-12">
-                                               <h2>$PRICE</h2>
+                                             
+                                             <div class="col-xs-4">
+                                               <h1>.......</h1>
+                                           </div>
+                                         
+                                       
+                                           <div class="col-xs-4">
+                                               <h2 ng-show="currentPrice">{{currentPrice.price | currency}}</h2>
                                             </div>
                                          </div>
                                    </div>
                                </div>
                            </div>
+                      
+                       <div class="row">
+                           <div class="col-xs-12 cat">
+                               <h2>Cats</h2>
+                           </div>
+                       </div>
                          
                     
                     
                         <div class="row"> 
-                               <div id="collapseTwo" class="panel-collapse collapse col-xs-12 ">
+                               <div class="col-xs-12 ">
                                    <div class="panel-body">
                                         <div class="row">
                                            <div class="col-xs-4">
