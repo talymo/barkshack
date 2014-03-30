@@ -13,7 +13,7 @@ body {
     color: #333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 130px;
 }
 
     a:focus,
@@ -41,7 +41,6 @@ body {
     .container #home {
         background-color:#F3F3F3;
         border:10px solid #A1C1BE;
-        margin-bottom:20px;
     }
 
     .container #about {
