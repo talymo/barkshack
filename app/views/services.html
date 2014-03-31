@@ -25,6 +25,13 @@
                <!--Boarding-->
                 <div class="tab-content">
                   <div id="boarding" class="tab-pane fade in active">
+                      <div class="row">
+                          
+                      
+                      
+                      <div class="col-xs-12 col-md-7">
+                          
+                      
                        
                       <ul class="dotted">
                         <li>
@@ -83,10 +90,15 @@
                            <p>Overnight pet care in your home. Price per visit.</p>
                        </li>
                     </ul>
-                    
+                          </div>
+                          
+                    <div class="col-xs-0 col-md-5">
                       
-                      <img src="http://placekitten.com/g/258/300" class="visible-md" />
-                      <img src="http://placekitten.com/g/458/300" class="visible-lg" />
+                      <img src="http://placekitten.com/g/258/300" class="visible-md pull-right" />
+                      <img src="http://placekitten.com/g/458/300" class="visible-lg img-responsive" />
+                          
+                     </div>
+                   </div>
                         
                   </div>
                     
@@ -94,224 +106,261 @@
                 
                   <div ng-controller="groomingCtrl" id="grooming" class="tab-pane fade in">
                        <div class="row">
-                           <div class="col-xs-12 dog">
+                           <div class="col-xs-12 col-md-7 dog">
                              <h2>Dogs</h2>  
                            </div>
                        </div>
-                         <div class="row"> 
-                               <div id="collapseOne" class="col-xs-12 ">
-                                   <div class="panel-body">
-                                        <div class="row">
-                                           <div class="col-xs-12">
-                                              <select class="col-md-12 col-sm-12 col-xs-12 form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
-                                                   <option class="form-control" value="">
-                                                       Select A Breed
-                                                  </option>
-                                              </select>
-                                            </div>
-                                         </div>
-                                         <div class="row">
-                                           <div class="col-xs-4">
-                                               <h2 ng-bind="breed"></h2>
-                                            </div>
-                                             
-                                             <div class="col-xs-4">
-                                               <h1>.......</h1>
-                                           </div>
-                                         
-                                       
-                                           <div class="col-xs-4">
-                                               <h2 ng-bind="price"></h2>
-                                            </div>
-                                         </div>
-                                   </div>
-                               </div>
-                           </div>
+                      
+                      
+                     <div class="col-xs-12 col-md-5">
+                         
+                                          
+                      <select class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                          <option class="form-control" value="">
+                              Select A Breed
+                          </option>
+                      </select>
+                         
+                          </div> 
+                      
+                      <div class="row">
+                       <div class="col-xs-12 col-md-7">
+                                            
+                      
+                      <ul class="dotted">
+                        <li>
+                            <div class="item">
+                                <span ng-bind="breed"></span>
+                             </div>
+                            <div class="prices">
+                                <div>
+                                    <span ng-bind="price"></span>
+                                 </div>
+                             </div>
+                            
+                        </li>
+                     
+                        
+                    </ul>
+                         
                       
                        <div class="row">
                            <div class="col-xs-12 cat">
                                <h2>Cats</h2>
                            </div>
                        </div>
-                       <div class="row"> 
-                               <div class="col-xs-12 ">
-                                   <div class="panel-body">
-                                        <div class="row">
-                                           <div class="col-xs-4">
-                                               <h2>Baths Only</h2>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h1>.......</h1>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h2>$15</h2>
-                                           </div>
-                                       </div>
+                     <ul class="dotted">
+                      <li>
+                            <div class="item">
+                                <span>Baths only</span>
+                            </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$15</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                         <li>
+                            <div class="item">
+                                <span>Flea Dip</span>
+                            </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$20</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                         <li>
+                            <div class="item">
+                                <span>Medicated Bath</span>
+                            </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$20</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                         <li>
+                            <div class="item">
+                                <span>Nails</span>
+                            </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$10</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                         <li>
+                            <div class="item">
+                                <span>Shave or Groom</span>
+                            </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$60</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                         <li>
+                            <div class="item">
+                                <span>Baths only</span>
+                            </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$15</span>
+                                </div>
+                            </div>
+                            
+                        </li>
+                      </ul>
+                      </div>
+                          
+                    <div class="col-xs-0 col-md-5">
+                      
+                      <img src="http://placekitten.com/g/258/300" class="visible-md pull-right" />
+                      <img src="http://placekitten.com/g/458/300" class="visible-lg img-responsive" />
+                          
+                     </div>
+                   </div>
+                        
+                  </div>
+                      
+                      
+                       
                                        
-                                       <div class="row">
-                                           <div class="col-xs-4">
-                                               <h2>Flea Dip</h2>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h1>.......</h1>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h2>$20</h2>
-                                           </div>
-                                       </div>
                                        
-                                       <div class="row">
-                                           <div class="col-xs-4">
-                                               <h2>Medicated Bath</h2>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h1>.......</h1>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h2>$20</h2>
-                                           </div>
-                                       </div>
                                        
-                                       <div class="row">
-                                           <div class="col-xs-4">
-                                               <h2>Nails</h2>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h1>.......</h1>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h2>$10</h2>
-                                           </div>
-                                       </div>
                                        
-                                       <div class="row">
-                                           <div class="col-xs-4">
-                                               <h2>Shave or Groom</h2>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h1>.......</h1>
-                                           </div>
-                                           <div class="col-xs-4">
-                                               <h2>$50-$60</h2>
-                                           </div>
-                                       </div>
-                                   </div>
+                                       
+                                       
+                                       
+                                       
+                              
+                           
+                    
+                 <!--Additional-->   
+                
+                  <div id="additional" class="tab-pane fade in">
+                      <div class="row">
+                          
+                      
+                      
+                      <div class="col-xs-12 col-md-7">
+                          
+                      
+                       
+                      <ul class="dotted">
+                        <li>
+                            <div class="item">
+                                <span>Warm Bath</span>
+                             </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$15</span>
+                                 </div>
+                             </div>
+                            <p>For Small Doggies</p>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span>Warm Bath</span>
+                             </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$20</span>
+                                 </div>
+                             </div>
+                            <p>For Larger Doggies</p>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span>Nail Trim</span>
+                             </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$10^</span>
+                                 </div>
+                             </div>
+                            <p>We will also dremmel the nails.</p>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span>Doggy Day Care</span>
+                             </div>
+                            <div class="prices">
+                                <div>
+                                    <span>$9</span>
+                                 </div>
+                             </div>
+                            <p>Prices vary for pickups and deliveries.</p>
+                        </li>  
+                        <li>
+                           <div class="item">
+                               <span>Pet Pics!</span>
+                           </div>
+                           <div class="prices">
+                               <div>
+                                   <span>$5</span>
                                </div>
                            </div>
-                    </div>
-                 <!--Additional-->   
-                <div id="additional" class="tab-pane fade in">
-                  
-                      <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Warm Bath</h2>
-                               <p>For Small Doggies.</p>
+                           <p>We will email or text you photos of your babies! Price per 5 pics.</p>
+                       </li>
+                           <li>
+                           <div class="item">
+                               <span>Daily Brushing</span>
                            </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
+                           <div class="prices">
+                               <div>
+                                   <span>$2</span>
+                               </div>
                            </div>
-                           <div class="col-xs-4">
-                               <h2>$15</h2>
+                           <p>We will brush your dog and free them of any tangles or dirt.</p>
+                       </li>
+                           <li>
+                           <div class="item">
+                               <span>Yummy Take-Home Bones.</span>
                            </div>
+                           <div class="prices">
+                               <div>
+                                   <span>$10</span>
+                               </div>
+                           </div>
+                           <p>Filled with pork or chicken.</p>
+                       </li>
+                          
+                           <li>
+                           <div class="item">
+                               <span>Peanut Butter Bones</span>
+                           </div>
+                           <div class="prices">
+                               <div>
+                                   <span>$8</span>
+                               </div>
+                           </div>
+                           <p>Sterilized bones filled with Peanut Butter.</p>
+                       </li>
+                    </ul>
+                          </div>
+                          
+                    <div class="col-xs-0 col-md-5">
                       
-                       </div>
-                      
-                      <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Warm Bath</h2>
-                               <p>For Larger Dogs.</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$20</h2>
-                           </div>
-                       </div>
-                      
-                      <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Nail Trim</h2>
-                               <p>We will also Dremmel the nails.</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$10-$15</h2>
-                           </div>
-                       </div>
-                      
-                      <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Doggy Day Care!</h2>
-                               <p>Prices vary for pickups and deliveries!</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$9</h2>
-                           </div>
-                       </div>
-                      
-                      <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Pet Pics!</h2>
-                               <p>We will email or text you photos of your babies! Price per 5 pics.</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$5</h2>
-                           </div>
-                       </div>
-                    
-                    <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Daily Brushing</h2>
-                               <p>We will brush your dog and free them of any tangles or dirt.</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$2</h2>
-                           </div>
-                       </div>
-                    
-                    <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Yummy Take-Home Bones</h2>
-                               <p>Filled with pork or chicken.</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$10</h2>
-                           </div>
-                       </div>
-                    
-                    <div class="row">
-                           <div class="col-xs-4">
-                               <h2>Peanut Butter Bones</h2>
-                               <p>Sterilized bones filled with peanut butter.</p>
-                           </div>
-                           <div class="col-xs-4">
-                               <h1>.......</h1>
-                           </div>
-                           <div class="col-xs-4">
-                               <h2>$8</h2>
-                           </div>
-                       </div>
-                    
-                    </div>
+                      <img src="http://placekitten.com/g/258/300" class="visible-md pull-right" />
+                      <img src="http://placekitten.com/g/458/300" class="visible-lg img-responsive" />
+                          
+                     </div>
+                   </div>
+                        
+                  </div>
+                        </div>
              </div>
         </div>       
     </div>
-    </div>
+   
+
 
 
 
