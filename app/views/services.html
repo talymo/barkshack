@@ -93,41 +93,48 @@
                 <!--Grooming-->
                 
                   <div ng-controller="groomingCtrl" id="grooming" class="tab-pane fade in">
-                       <div class="row" id="accordian">
-                           <div class="col-xs-6 dog img-rounded img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                       <div class="row">
+                           <div class="col-xs-12 dog">
                              <h2>Dogs</h2>  
                            </div>
-                           <div class="col-xs-6 cat img-rounded img-responsive" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                               <h2>Cats</h2>
-                           </div>
                        </div>
-                           
-                           <div class="row"> 
-                               <div id="collapseOne" class="panel-collapse collapse col-xs-12 ">
+                         <div class="row"> 
+                               <div id="collapseOne" class="col-xs-12 ">
                                    <div class="panel-body">
                                         <div class="row">
                                            <div class="col-xs-12">
-                                               <h2>What Breed is your Dog?</h2> 
-                                           </div>
-                                         </div>
-                                         <div class="row">
-                                           <div class="col-xs-12">
-                                               <h2>(Select Breed)</h2>
+                                              <select class="col-md-12 col-sm-12 col-xs-12 form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                                                   <option class="form-control" value="">
+                                                       Select A Breed
+                                                  </option>
+                                              </select>
                                             </div>
                                          </div>
-                                       <div class="row">
-                                           <div class="col-xs-12">
-                                               <h2>$PRICE</h2>
+                                         <div class="row">
+                                           <div class="col-xs-4">
+                                               <h2 ng-bind="breed"></h2>
+                                            </div>
+                                             
+                                             <div class="col-xs-4">
+                                               <h1>.......</h1>
+                                           </div>
+                                         
+                                       
+                                           <div class="col-xs-4">
+                                               <h2 ng-bind="price"></h2>
                                             </div>
                                          </div>
                                    </div>
                                </div>
                            </div>
-                         
-                    
-                    
-                        <div class="row"> 
-                               <div id="collapseTwo" class="panel-collapse collapse col-xs-12 ">
+                      
+                       <div class="row">
+                           <div class="col-xs-12 cat">
+                               <h2>Cats</h2>
+                           </div>
+                       </div>
+                       <div class="row"> 
+                               <div class="col-xs-12 ">
                                    <div class="panel-body">
                                         <div class="row">
                                            <div class="col-xs-4">
@@ -192,12 +199,6 @@
                                </div>
                            </div>
                     </div>
-                    
-                           
-                           
-                    
-                   
-                    
                  <!--Additional-->   
                 <div id="additional" class="tab-pane fade in">
                   

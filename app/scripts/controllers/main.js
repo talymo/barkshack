@@ -138,43 +138,218 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
 
 barkshack.controller('groomingCtrl', function ($scope) {
 
-        $scope.dogSelection = function () {
-
-            var isActive = ($('.dog').hasClass('isActive'));
-
-
-            if (isActive) {
-                $(".circleContainer").toggleClass("dogWideContainer", 1000, "easeInOutCubic", function () {
-                    $(".cat").fadeIn("slow", "linear");
-                    $(".dog").removeClass('isActive');
-                });
-            } else {
-                $(".cat").fadeOut("slow", "linear", function () {
-                    $(".circleContainer").toggleClass("dogWideContainer", 1000, "easeInOutCubic");
-                    $(".dog").addClass('isActive');
-                });
-            }
-
-
-        }
-
-        $scope.catSelection = function () {
-            var isActive = ($('.cat').hasClass('isActive'));
-
-
-            if (isActive) {
-                $(".circleContainer").toggleClass("catWideContainer", 1000, "easeInOutCubic", function () {
-                    $(".dog").fadeIn("slow", "linear");
-                    $(".cat").removeClass('isActive');
-                });
-            } else {
-                $(".dog").fadeOut("slow", "linear", function () {
-                    $(".circleContainer").toggleClass("catWideContainer", 1000, "easeInOutCubic");
-                    $(".cat").addClass('isActive');
-                });
-            }
-        
-
-};
+    $scope.breeds = [
+     {
+      name: "Airedale",
+      price: "$60",
+          },
+      {
+      name: "Akita",
+      price: "$65",
+    },
+       {
+      name: "Austrailian Sheep Dog",
+      price: "$50", 
+    },
+     {
+      name: "Bernese Mountain Dog",
+      price: "$65", 
+    },
+    {
+      name: "Bichon",
+      price: "$50",
+    },
+     {
+      name: "Border Collie",
+      price: "$50",
+    },
+     {
+      name: "Border Terrier",
+      price: "$45",
+    },
+     {
+      name: "Boykin",
+      price: "$50",
+    },
+     {
+      name: "Brittany",
+      price: "$50",
+    },
+     {
+      name: "Bouvier",
+      price: "$65",
+    },
+     {
+      name: "Cairn",
+      price: "$45",
+    },
+     {
+      name: "Cavalier",
+      price: "$55",
+    },
+     {
+      name: "Chow",
+      price: "$60",
+    },
+     {
+      name: "Cockapoo",
+      price: "$50",
+    },
+     {
+      name: "Cocker",
+      price: "$50",
+    },
+     {
+      name: "Corgi",
+      price: "$45",
+    },
+     {
+      name: "English Setter",
+      price: "$50",
+    },
+     {
+      name: "Eskimo Spitz",
+      price: "$50",
+    },
+     {
+      name: "German Shephard",
+      price: "$55",
+    },
+     {
+      name: "Golden Retriever",
+      price: "$50",
+    },
+     {
+      name: "Golden Doodle",
+      price: "$65",
+    },
+     {
+      name: "Great Pyrenese",
+      price: "$55",
+    },
+     {
+      name: "Irish Setter",
+      price: "$50",
+    },
+     {
+      name: "Japanese Chin",
+      price: "$40",
+    },
+     {
+      name: "Keeshond",
+      price: "$50",
+    },
+     {
+      name: "Labrador Retriever",
+      price: "$50",
+    },
+     {
+      name: "Lhasa Apso",
+      price: "$45",
+    },
+     {
+      name: "Maltese",
+      price: "$40",
+    },
+     {
+      name: "Newfoundland",
+      price: "$65",
+    },
+     {
+      name: "Norfolk Terrier",
+      price: "$45",
+    },
+     {
+      name: "Old English Sheepdog",
+      price: "$65",
+    },
+     {
+      name: "Newfoundland",
+      price: "$40",
+    },
+     {
+      name: "Pekignese",
+      price: "$45",
+    },
+     {
+      name: "Toy Poodle",
+      price: "$40",
+    },
+     {
+      name: "Miniature Poodle",
+      price: "$40",
+    },
+     {
+      name: "Standard Poodle",
+      price: "$65",
+    },
+     {
+      name: "Samoyed",
+      price: "$55",
+    },
+     {
+      name: "Miniature Scnauzer",
+      price: "$45",
+    },
+     {
+      name: "Standard Scnauzer",
+      price: "$50",
+    },
+     {
+      name: "Giant Scnauzer",
+      price: "$60",
+    },
+     {
+      name: "Scottish Terrier",
+      price: "$45",
+    },
+     {
+      name: "Sheltie",
+      price: "$50",
+    },
+     {
+      name: "Shih Tzu",
+      price: "$45",
+    },
+     {
+      name: "Springer Spaniel",
+      price: "$50",
+    },
+     {
+      name: "Saint Bernard",
+      price: "$65",
+    },
+     {
+      name: "Tibetan Terrier",
+      price: "$45",
+    },
+     {
+      name: "Welsh Terrier",
+      price: "$45",
+    },
+     {
+      name: "Westie",
+      price: "$45",
+    },
+     {
+      name: "Wheaton Terrier",
+      price: "$60",
+    },
+     {
+      name: "Yorkie",
+      price:"$45",
+    },
+  ];
+ 
+  
+    
+    $scope.setBreed = function (breed) {
+    $scope.price = breed.price;
+        $scope.breed = breed.name;
+  };
+    
+   
+    
+    
     });
 
