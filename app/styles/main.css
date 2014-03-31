@@ -36,6 +36,8 @@ body {
         padding-left:15px;
         padding-right:15px;
         /*margin-top:100px;*/
+        margin-left:10px;
+        margin-right:10px;
     }
 
     .container.body > .row:first-of-type {
@@ -46,6 +48,7 @@ body {
     .container #home {
         background-color:#F3F3F3;
         border:10px solid #A1C1BE;
+        
     }
 
     .container #about {
@@ -237,6 +240,7 @@ body {
             background-color: #A1C1BE;
             padding: 10px;
             margin-top: 0;
+            
         }
 
         .container #whiteContainer {
@@ -282,6 +286,13 @@ body {
 /*Tablet*/
 @media(min-width:768px){
     
+    .container.body {
+        
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    
     .navbar .nav {
         margin-top:12px;
     }
@@ -312,6 +323,8 @@ body {
         .nav#social img {
             width:20px;
         }
+    
+    .
     
     .container #tealContainer {
         padding: 10px;
