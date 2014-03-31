@@ -92,36 +92,22 @@
                            <div class="col-xs-12 dog">
                              <h2>Dogs</h2>  
                            </div>
-                           
                        </div>
-                           
-                           <div class="row"> 
+                         <div class="row"> 
                                <div id="collapseOne" class="col-xs-12 ">
                                    <div class="panel-body">
                                         <div class="row">
                                            <div class="col-xs-12">
-                                               
-                                               
-                                               <button class="dropdown-toggle btn-primary btn-lg" data-toggle="dropdown">Select Your Breed</button>
-						                            <ul class="dropdown-menu scrollable-menu col-md-12 col-sm-12 col-xs-12" role="menu">
-							                            <li class="breedList" ng-repeat="breed in breeds">
-								
-			  					                            <a href="" ng-click="showPrice(breed.name)">{{breed.name}}</a>
-								
-							                            </li>
-						                            </ul>
-                                               
-                                               
-                                               
-                                               
-                                           </div>
+                                              <select class="col-md-12 col-sm-12 col-xs-12 form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                                                   <option class="form-control" value="">
+                                                       Select A Breed
+                                                  </option>
+                                              </select>
+                                            </div>
                                          </div>
-                                       
-                             
-                                       
                                          <div class="row">
                                            <div class="col-xs-4">
-                                               <h2>(Select Breed)</h2>
+                                               <h2 ng-bind="breed"></h2>
                                             </div>
                                              
                                              <div class="col-xs-4">
@@ -130,7 +116,7 @@
                                          
                                        
                                            <div class="col-xs-4">
-                                               <h2 ng-show="currentPrice">{{currentPrice.price | currency}}</h2>
+                                               <h2 ng-bind="price"></h2>
                                             </div>
                                          </div>
                                    </div>
@@ -142,10 +128,7 @@
                                <h2>Cats</h2>
                            </div>
                        </div>
-                         
-                    
-                    
-                        <div class="row"> 
+                       <div class="row"> 
                                <div class="col-xs-12 ">
                                    <div class="panel-body">
                                         <div class="row">
@@ -211,12 +194,6 @@
                                </div>
                            </div>
                     </div>
-                    
-                           
-                           
-                    
-                   
-                    
                  <!--Additional-->   
                 <div id="additional" class="tab-pane fade in">
                   
