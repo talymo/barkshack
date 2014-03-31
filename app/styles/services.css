@@ -38,6 +38,8 @@
                 border-right: 1px solid #CCCCCC;
                 display: block;
                 padding:20px;
+                overflow:hidden;
+                margin-bottom:30px;
             }
         
             #grooming .circleContainer {
