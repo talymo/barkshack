@@ -22,17 +22,15 @@
     }
 
 @media(min-width:768px){
-    
-}
-
-@media(min-width:992px){
-    #gallery img {
-        width:33.3333333333%;
-    }
-}
-
-@media(min-width:1120px){
     #gallery img {
         width:25%;
     }
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1120px){
+    
 }
