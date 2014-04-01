@@ -2,7 +2,6 @@
 
 barkshack.controller('HeaderCtrl', function($scope, $location) {
     $scope.getClass = function(path) {
-        console.log($location.path().substr(0, path.length));
         if ($location.path().substr(0, path.length) == path) {
           return "active"
         } else {
@@ -74,6 +73,7 @@ barkshack.controller('GalleryCtrl', function($scope, $http, instagrams) {
 
 barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
     
+    $scope.disabled = true;
     $scope.datePicked = false;
     $scope.instructions = '';
     $scope.showConfirm = 'disabled';
@@ -120,20 +120,51 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
        
     });
     
+    
+    
     $scope.checkForm = function() {
-        console.log('hit');
         if($scope.appointment.day && $scope.appointment.month && $scope.appointment.year && $scope.appointment.time && $scope.appointment.service && $scope.appointment.name && $scope.appointment.phone && $scope.appointment.email) {
+            
             if($scope.appointment.pickup == 'Yes') {
-                if($scope.appointment.address) {
-                    console.log('good to go');
-                }
+                $scope.checkBox();
             } else {
-                
+                $scope.disabled = false;
+                $scope.$apply();
             }
-        }   
+            
+        } else {
+            $scope.disabled = true;
+            $scope.$apply();
+        }
+           
     };
     
-   
+    $scope.checkBox = function() {
+        if($scope.appointment.pickup == 'Yes') {
+            if($scope.appointment.address) {
+                $scope.disabled = false;
+                $scope.$apply();
+            } else {
+                $scope.disabled = true;
+                $scope.$apply();
+            }
+        } else {
+            $scope.disabled = false;
+            $scope.$apply();
+        }
+    };
+    
+    $('input, select').bind({
+      click: function() {
+        $scope.checkForm(); 
+      },
+      blur: function() {
+        $scope.checkForm();
+      },
+        change: function() {
+            $scope.checkBox();
+        }
+    });
     
     
 });

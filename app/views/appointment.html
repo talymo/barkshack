@@ -42,7 +42,7 @@
               <h2 ng-bind="instructions"></h2>
               <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-4">
-                      <select class="form-control" ng-model="appointment.time">
+                      <select class="form-control" ng-model="appointment.time" id="time">
                           <option>7 am</option>
                           <option>8 am</option>
                           <option>9 am</option>
@@ -64,17 +64,17 @@
                       </label>
                   </div>
                   <div class="col-xs-12" id="contactStuff" ng-show="appointment.time">
-                      <input type="text" class="form-control" placeholder="First and Last Name" ng-model="appointment.name">
-                      <input type="tel" class="form-control" placeholder="Phone Number" ng-model="appointment.phone">
-                      <input type="email" class="form-control" placeholder="Email Address" ng-model="appointment.email">
+                      <input type="text" id="name" class="form-control" placeholder="First and Last Name" ng-model="appointment.name">
+                      <input type="tel" id="phone" class="form-control" placeholder="Phone Number" ng-model="appointment.phone">
+                      <input type="email" id="email" class="form-control" placeholder="Email Address" ng-model="appointment.email">
                   </div>
                   <div class="col-xs-12" id="addressStuff" ng-show="appointment.pickup">
-                      <input type="text" class="form-control" placeholder="Provide your full address" ng-model="appointment.address">
+                      <input type="text" id="address" class="form-control" placeholder="Provide your full address" ng-model="appointment.address">
                       <input type="text" class="form-control" placeholder="Apartment number or gate code" ng-model="appointment.moreInfo">
                   </div>
                   <div class="col-xs-12">
                       <h2 class="marginTop">Select a service</h2>
-                      <select class="form-control" ng-model="appointment.service">
+                      <select class="form-control" ng-model="appointment.service" id="service">
                         <optgroup label="Boarding">
                             <option>Dog Boarding</option>
                             <option>Cat Boarding</option>
@@ -127,7 +127,7 @@
               </div>
               <div class="row">
                   <div class="col-xs-12">
-                      <button class="form-control btn btn-primary btn-lg" ng-click="checkForm()">
+                      <button class="form-control btn btn-primary btn-lg" ng-disabled="disabled">
                           Confirm Appointment
                       </button>
                   </div>
