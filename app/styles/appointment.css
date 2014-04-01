@@ -134,6 +134,10 @@
                 margin-bottom:10px;
             }
 
+            #appointment .form-control {
+                color:#A1C1BE;
+            }
+
     #appointment #appointmentMeta p span {
         color:#A1C1BE;
     }
