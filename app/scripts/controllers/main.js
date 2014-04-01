@@ -105,7 +105,9 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
         var isPast = $(currentDay).parent().hasClass('past');
         
         if(!isPast){
-
+            $('.picked').removeClass('picked');
+            $(currentDay).parent().addClass('picked');
+            
             $scope.datePicked = true;
             $scope.instructions = 'Select a time';
             $scope.appointment.day = $(currentDay).attr('data-day');

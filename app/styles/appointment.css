@@ -55,6 +55,10 @@
 .responsive-calendar .day.header {
   border-bottom: 1px #BCA898 solid;
 }
+
+.responsive-calendar .day.picked {
+    background-color:#BCA898;
+}
 .responsive-calendar .day.active a {
   background-color: #1d86c8;
   color: #ffffff;
