@@ -36,10 +36,23 @@ barkshack.config(function($routeProvider){
         templateUrl: 'views/appointment.html',
         controller: 'AppointmentCtrl'
     })
+    .when('/services/grooming', {
+        templateUrl: 'views/services.html',
+        controller: 'groomingCtrl',
+        activeTab: 'grooming'
+    })
+    .when('/services/boarding', {
+        templateUrl: 'views/services.html',
+        controller: 'groomingCtrl',
+        activeTab: 'boarding'
+    })
+    .when('/services/additional', {
+        templateUrl: 'views/services.html',
+        controller: 'groomingCtrl',
+        activeTab: 'additional'
+    })
       .otherwise({
         redirectTo: '/'
       });
 });
-
-
 

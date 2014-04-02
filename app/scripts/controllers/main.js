@@ -169,8 +169,20 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
     
 });
 
-barkshack.controller('groomingCtrl', function ($scope) {
+barkshack.controller('groomingCtrl', function ($scope,$route) {
 
+    $scope.$route = $route;
+    
+    var activeContent = '#' + $route.current.activeTab;
+    
+    $('.tab-pane').removeClass('active');
+    
+    $(activeContent).addClass('active');
+    
+    console.log(activeContent);
+    
+    console.log($scope.$route);
+    
     $scope.breeds = [
      {
       name: "Airedale",
