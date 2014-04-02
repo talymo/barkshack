@@ -374,15 +374,21 @@ barkshack.controller('groomingCtrl', function ($scope) {
     },
   ];
  
-  
-    
     $scope.setBreed = function (breed) {
     $scope.price = breed.price;
-        $scope.breed = breed.name;
+    $scope.breed = breed.name;
   };
+        
+        });
+        
+       
+
+      
     
-   
+
+        
+        
     
     
-    });
+    
 
