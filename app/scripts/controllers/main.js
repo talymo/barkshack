@@ -380,15 +380,4 @@ barkshack.controller('groomingCtrl', function ($scope) {
   };
         
         });
-        
-       
-
-      
-    
-
-        
-        
-    
-    
-    
-
+  
