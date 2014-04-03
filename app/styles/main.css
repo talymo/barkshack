@@ -15,6 +15,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* Margin bottom by footer height */
     margin-bottom: 130px;
+    margin-top:86px;
 }
 
     a:focus,
@@ -45,10 +46,14 @@ body {
         margin-top:60px;
     }
 
+    .container.body #home {
+        margin-top:-7px;
+    }
+
 
     .container #home {
         background-color:#F3F3F3;
-        border:10px solid #A1C1BE;
+        border:10px solid #002D56;
         
     }
 
@@ -60,6 +65,8 @@ body {
         margin-bottom:0px;
         background-color:#fafafa;
         padding-bottom:10px;
+        border-top:5px solid #4A6C16;
+        border-radius:0;
     }
 
     .navbar .container {
@@ -71,30 +78,32 @@ body {
             margin-top:40px;
         }
 
-    .navbar-default {
-        border:none;
-    }
-
-        .navbar-default .navbar-nav > li > a {
-            color: #A1C1BE;
+        .navbar-nav > li > a {
+            color: #002D56;
         }
 
-        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a.active {
-            color:#4D2F15;
+        .navbar-nav > li > a:hover, .navbar-nav > li > a:focus, .navbar-nav > li > a.active {
+            color:#4A6C16;
+            background-color:transparent;
         }
 
     .navbar-header {
         border:none;
     }
 
-    .navbar-default .navbar-toggle {
-        border-color:#A1C1BE;
+    .navbar-toggle {
+        border-color:#002D56;
         margin-bottom:2px;
         margin-top:24px;
+        background-color:#002D56;
     }
 
-        .navbar-default .navbar-toggle:hover {
-            background-color:#59554E;
+        .navbar-toggle:hover {
+            background-color:#717073;
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color:#fff;
         }
 
         .navbar-brand img {
@@ -112,7 +121,7 @@ body {
 
         .navbar-brand h2 {
             margin-top:0;
-            color:#A1C1BE;
+            color:#002D56;
         }
 
 	.nav#social {
@@ -151,7 +160,7 @@ body {
     }
 
     .divider {
-        border-bottom: 1px solid #8E887D;
+        border-bottom: 1px solid #939393;
         width:100%;
         display:block;
         height:11px;
@@ -166,7 +175,7 @@ body {
         font-size:14px;
         display:inline-block;
         margin-top:-24px;
-        color:#8E887D;
+        color:#939393;
     }
 
     #callout p {
@@ -206,7 +215,7 @@ body {
     }
 
     .container #promo #special {
-        border-color:#A1C1BE;
+        border-color:#002D56;
         border-style:dashed;
         border-width:1px;
         overflow:hidden;
@@ -216,8 +225,8 @@ body {
     }
 
         .container #promo #special img {
-            background-color: #A1C1BE;
-            border: 1px solid #8E887D;
+            background-color: #4A6C16;
+            border: 1px solid #4A6C16;
             border-radius: 40px;
             float: left;
             height: 76px;
@@ -227,10 +236,11 @@ body {
 
         .container #promo #special h2 {
             font-size:18px;
-            color:#8E887D;
+            color:#4A6C16;
             margin:0;
             display: table-cell;
             vertical-align: middle;
+            padding-right:10px;
         }
 
         .container #map {
@@ -238,7 +248,7 @@ body {
         }
 
         .container #tealContainer {
-            background-color: #A1C1BE;
+            background-color: #002D56;
             padding: 10px;
             margin-top: 0;
             
@@ -252,7 +262,7 @@ body {
 
                 .container #whiteContainer h2,
                 .container #whiteContainer p {
-                    color:#7F6B5B;
+                    color:#939393;
                 }
 
                 .container #whiteContainer h2 {
@@ -260,7 +270,7 @@ body {
                     line-height:36px;
                     text-align:center;
                     font-family: 'Montez', cursive;
-                    color: #BCA898;
+                    color: #939393;
                 }
 
 #footer {
@@ -276,7 +286,7 @@ body {
 
 	#footer .container,
 	#footer .container a {
-        color:#86AAA7;
+        color:#002D56;
         font-size:12px;
     }
 
@@ -320,7 +330,7 @@ body {
     }
     
     .container #promo #special h2 {
-        font-size:24px;
+        font-size:23px;
     }
     
     .nav#social {

@@ -89,17 +89,15 @@
                 <!--Grooming-->
                 
                     <div ng-controller="groomingCtrl" id="grooming" class="tab-pane fade in">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-7 dog">
-                                <h2>Dogs</h2>  
-                            </div>
-                        </div>
-                        <select class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
-                            <option class="form-control" value="">
-                                Select A Breed
-                            </option>
-                        </select>
-                        <ul class="dotted">
+                        
+                        <div class="left">
+                            <h2>Dogs</h2>
+                            <select class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                                <option class="form-control" value="">
+                                    Select A Breed
+                                </option>
+                            </select>
+                            <ul class="dotted">
                             <li>
                                 <div class="item">
                                     <span ng-bind="breed"></span>
@@ -111,78 +109,84 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-7 cat">
-                                <h2>Cats</h2>
+                            
+                            <div class="separator">
+                                
                             </div>
+                            
+                            <h2>Cats</h2>
+                            <ul class="dotted">
+                                <li>
+                                    <div class="item">
+                                        <span>Baths only</span>
+                                    </div>
+                                    <div class="prices">
+                                        <div>
+                                            <span>$15</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <span>Flea Dip</span>
+                                    </div>
+                                    <div class="prices">
+                                        <div>
+                                            <span>$20</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <span>Medicated Bath</span>
+                                    </div>
+                                    <div class="prices">
+                                        <div>
+                                            <span>$20</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <span>Nails</span>
+                                    </div>
+                                    <div class="prices">
+                                        <div>
+                                            <span>$10</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <span>Shave or Groom</span>
+                                    </div>
+                                    <div class="prices">
+                                        <div>
+                                            <span>$60</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <span>Baths only</span>
+                                    </div>
+                                    <div class="prices">
+                                        <div>
+                                            <span>$15</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="dotted">
-                            <li>
-                                <div class="item">
-                                    <span>Baths only</span>
-                                </div>
-                                <div class="prices">
-                                    <div>
-                                        <span>$15</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <span>Flea Dip</span>
-                                </div>
-                                <div class="prices">
-                                    <div>
-                                        <span>$20</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <span>Medicated Bath</span>
-                                </div>
-                                <div class="prices">
-                                    <div>
-                                        <span>$20</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <span>Nails</span>
-                                </div>
-                                <div class="prices">
-                                    <div>
-                                        <span>$10</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <span>Shave or Groom</span>
-                                </div>
-                                <div class="prices">
-                                    <div>
-                                        <span>$60</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <span>Baths only</span>
-                                </div>
-                                <div class="prices">
-                                    <div>
-                                        <span>$15</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <img src="images/services/services1.jpg" class="visible-md" />
-                        <img src="images/services/services2.jpg" class="visible-lg" />
+                        
+                        <div class="pull-left hidden-sm hidden-xs">
+                            <img src="images/services/services1.jpg" class="visible-md" />
+                            <img src="images/services/services2.jpg" class="visible-lg" />
+                        </div>
+                        
                     </div>
                  
-                 <!--Additional-->   
+                 <!--Additional-->
                 
                   <div id="additional" class="tab-pane fade in">
                       <ul class="dotted">
@@ -229,7 +233,7 @@
                                  </div>
                              </div>
                             <p>Prices vary for pickups and deliveries.</p>
-                        </li>  
+                        </li>
                         <li>
                            <div class="item">
                                <span>Pet Pics!</span>
@@ -276,11 +280,11 @@
                        </li>
                     </ul>
                     <img src="images/services/services1.jpg" class="visible-md" />
-                    <img src="images/services/services2.jpg" class="visible-lg" />      
+                    <img src="images/services/services2.jpg" class="visible-lg" />
                   </div>
                 </div>
              </div>
-        </div>       
+        </div>
     </div>
    
 

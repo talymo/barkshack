@@ -6,6 +6,7 @@
         position:absolute;
         right:-15px;
         top:-15px;
+        z-index:10000;
     }
 
         .container #whiteContainer .services-tab {
@@ -21,7 +22,7 @@
             line-height: 30px;
             text-align: center;
             font-family: 'Montez', cursive;
-            color: #BCA898;
+            color: #717073;
         }
 
         .container #whiteContainer .services-tab {
@@ -65,6 +66,18 @@
                 height: 125px;
                 width: 175px;
                 display: inline-block;            
+            }
+
+            .container #whiteContainer #grooming h2 {
+                text-align:left;
+                margin-bottom:10px;
+            }
+
+            .container #whiteContainer #grooming .separator {
+                float:left;
+                height:30px;
+                width:100%;
+                clear:both;
             }
 
             ul.dotted {
@@ -129,7 +142,7 @@
             div.prices span {
                 right: 0;
                 width: 80%;
-                color:#A1C1BE;
+                color:#4A6C16;
             }
 
             div.prices div {
@@ -173,15 +186,13 @@
   .container #whiteContainer h2 {
     font-size: 24px;
     line-height: 36px;
-    text-align: center;
     font-family: 'Montez', cursive;
-    color: #BCA898;
       
   }
     
     .container #whiteContainer .services-tab {
         font-size: 20px;
-        color: #7F6B5B;
+        color: #939393;
         padding-bottom: 10px;
     }
     
@@ -203,6 +214,8 @@
         width: 8%;
         overflow: visible;
     } 
+    
+    
 
 }
 
@@ -214,5 +227,19 @@
         padding-right: 50px;
         width: 600px;
      }
+    
+    #grooming .left {
+        float:left;
+    }
+    
+    .container #whiteContainer #grooming .separator {
+        height:20px;
+        width:556px;
+    }
+    
+    #grooming select {
+        margin-bottom:20px;
+        width:50%;
+    }
     
 }
