@@ -8,8 +8,8 @@
 */
 
 #appointment .btn-primary {
-    background-color:#4D2F15;
-    border-color:#4D2F15;
+    background-color:#002D56;
+    border-color:#002D56;
 }
 
     #appointment .btn-primary:hover {
@@ -29,7 +29,6 @@
 }
 .responsive-calendar .controls h4 {
   display: inline;
-    color:#A1C1BE;
 }
 .responsive-calendar .day-headers,
 .responsive-calendar .days {
@@ -116,7 +115,7 @@
         }
 
 		#appointment #appointmentMeta .appointmentCard h2 {
-            border-bottom:1px solid #A1C1BE;
+            border-bottom:1px solid #4A6C16;
             margin-bottom:10px;
             padding-bottom:10px;
         }
@@ -134,12 +133,12 @@
                 margin-bottom:10px;
             }
 
-            #appointment .form-control {
-                color:#A1C1BE;
+            #appointment .form-control button {
+                color:#fff;
             }
 
     #appointment #appointmentMeta p span {
-        color:#A1C1BE;
+        color:#4A6C16;
     }
 
     #appointment #addressStuff input,

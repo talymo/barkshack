@@ -13,9 +13,9 @@
     
     #contact #info h3 {
         font-size:20px;
-        color:#7F6B5B;
+        color:#717073;
         padding-bottom:10px;
-        border-bottom:1px solid #A1C1BE;
+        border-bottom:1px solid #4A6C16;
     }
 
     #contact #info p {
@@ -24,7 +24,7 @@
 
     #contact #info a,
     #contact #form label {
-        color:#A1C1BE;
+        color:#4A6C16;
     }
 
     #contact #info p.address {
@@ -41,8 +41,8 @@
     }
 
     #contact #form .btn {
-        background-color:#7F6B5B;
-        border-color:#E7E7E1;
+        background-color:#002D56;
+        border-color:#002D56;
         border-radius:0;
         margin-bottom:30px;
     }

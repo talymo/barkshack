@@ -98,8 +98,16 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
         'message': ''
     };
     
+    var myDate = new Date();
+    var prettyDate =
+        myDate.getFullYear()  + '-' +
+        ( '0' + (myDate.getMonth()+1) ).slice( -2 );
+    
+    
+    console.log(prettyDate);
+    
     $(".responsive-calendar").responsiveCalendar({
-        time: '2014-03',
+        time: prettyDate,
         events: {}
     });
     
@@ -390,10 +398,13 @@ barkshack.controller('groomingCtrl', function ($scope,$route) {
     },
   ];
  
-    $scope.setBreed = function (breed) {
-    $scope.price = breed.price;
-    $scope.breed = breed.name;
-  };
+    $scope.price = '$0';
+    $scope.breed = 'Please choose your breed'
         
-        });
+    $scope.setBreed = function (breed) {
+        $scope.price = breed.price;
+        $scope.breed = breed.name;
+      };
+        
+});
   
