@@ -89,17 +89,29 @@
                 <!--Grooming-->
                 
                     <div ng-controller="groomingCtrl" id="grooming" class="tab-pane fade in">
-
+<<<<<<< HEAD
                         
                         <div class="left">
                             <h2>Dogs</h2>
-                            <select id='breedSelect' class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                            <select class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
                                 <option class="form-control" value="">
                                     Select A Breed
                                 </option>
                             </select>
                             <ul class="dotted">
-
+=======
+                        <div class="row">
+                            <div class="col-xs-12 col-md-7 dog">
+                                <h2>Dogs</h2>  
+                            </div>
+                        </div>
+                        <select id='breedSelect' class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                            <option class="form-control" value="">
+                                Select A Breed
+                            </option>
+                        </select>
+                        <ul class="dotted">
+>>>>>>> iss34
                             <li>
                                 <div class="item">
                                     <span ng-bind="breed"></span>
