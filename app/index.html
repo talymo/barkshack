@@ -63,13 +63,13 @@ AIzaSyB-jSI5dBK2g-TWIoZEICE5md3Bf-wu1uE&sensor=true">
                     <img src="images/logo.png" />
                 </a>
               </div>
-              <div class="navbar-collapse collapse">
+              <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a ng-class="getClass('/about')" href="#/about" data-toggle="collapse" data-target=".navbar-collapse">ABOUT</a></li>
-                    <li><a ng-class="getClass('/services')" href="#/services" data-toggle="collapse" data-target=".navbar-collapse">SERVICES</a></li>
-                    <li><a ng-class="getClass('/gallery')" href="#/gallery" data-toggle="collapse" data-target=".navbar-collapse">GALLERY</a></li>
-                    <li><a ng-class="getClass('/faqs')" href="#/faqs" data-toggle="collapse" data-target=".navbar-collapse">FAQ</a></li>
-                    <li><a ng-class="getClass('/contact')" href="#/contact" data-toggle="collapse" data-target=".navbar-collapse">CONTACT</a></li>
+                    <li><a ng-click="toggleNav()" ng-class="getClass('/about')" href="#/about">ABOUT</a></li>
+                    <li><a ng-click="toggleNav()" ng-class="getClass('/services')" href="#/services/boarding">SERVICES</a></li>
+                    <li><a ng-click="toggleNav()" ng-class="getClass('/gallery')" href="#/gallery">GALLERY</a></li>
+                    <li><a ng-click="toggleNav()" ng-class="getClass('/faqs')" href="#/faqs">FAQ</a></li>
+                    <li><a ng-click="toggleNav()" ng-class="getClass('/contact')" href="#/contact">CONTACT</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" id="social">
                     
@@ -101,7 +101,7 @@ AIzaSyB-jSI5dBK2g-TWIoZEICE5md3Bf-wu1uE&sensor=true">
       g.src='//www.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-     
+      <script src="scripts/portals.js"></script>
 
      
     <script src="bower_components/angular/angular.js"></script>

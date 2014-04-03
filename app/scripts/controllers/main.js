@@ -8,6 +8,12 @@ barkshack.controller('HeaderCtrl', function($scope, $location) {
           return ""
         }
     };
+    
+    $scope.toggleNav = function($scope) {
+        if ($('#navbar').hasClass('in')) {
+            $('#navbar').collapse('hide');
+        }
+    };  
 });
 
 barkshack.controller('MainCtrl', function ($scope) {
@@ -179,9 +185,7 @@ barkshack.controller('groomingCtrl', function ($scope,$route) {
     
     $(activeContent).addClass('active');
     
-    console.log(activeContent);
-    
-    console.log($scope.$route);
+ 
     
     $scope.breeds = [
      {
