@@ -42,7 +42,7 @@
               <h2 ng-bind="instructions"></h2>
               <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-4">
-                      <select class="form-control" ng-model="appointment.time" id="time">
+                      <select multiple class="form-control" ng-model="appointment.time" id="time">
                           <option>7 am</option>
                           <option>8 am</option>
                           <option>9 am</option>
@@ -74,7 +74,7 @@
                   </div>
                   <div class="col-xs-12">
                       <h2 class="marginTop">Select a service</h2>
-                      <select class="form-control" ng-model="appointment.service" id="service">
+                      <select multiple class="form-control" ng-model="appointment.service" id="service">
                         <optgroup label="Boarding">
                             <option>Dog Boarding</option>
                             <option>Cat Boarding</option>
@@ -83,9 +83,17 @@
                             <option>Overnight Home Pet Care</option>
                         </optgroup>
                         <optgroup label="Grooming">
+                            <option>Large Dog</option>
+                            <option>Small Dog</option>
+                            <option>Kitty Bath</option>
+                            <option>Cat Groom</option>
+                            <option>Flea Dip</option>
+                            <option>Nail Trim</option>
+                        </optgroup>
+                        <optgroup label="Additional">
                             <option>Bath (small dog)</option>
                             <option>Bath (large dog)</option>
-                            <option>Nail Trim</option>
+                            <option>Doggy Day Care</option>     
                         </optgroup>
                     </select>
                   </div>

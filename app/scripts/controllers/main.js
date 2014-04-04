@@ -192,9 +192,7 @@ barkshack.controller('groomingCtrl', function ($scope,$route) {
     $('.tab-pane').removeClass('active');
     
     $(activeContent).addClass('active');
-    
- 
-    
+   
     $scope.breeds = [
      {
       name: "Airedale",

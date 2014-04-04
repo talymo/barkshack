@@ -76,6 +76,7 @@ body {
     
         .navbar .nav {
             margin-top:40px;
+            font-weight: bold;
         }
 
         .navbar-nav > li > a {
@@ -144,6 +145,7 @@ body {
         .carousel .item img {
             width:100%;
             border-top:none;
+            border-bottom: 10px solid #4A6C16;
             
         }
 

@@ -91,14 +91,15 @@
                     <div ng-controller="groomingCtrl" id="grooming" class="tab-pane fade in">
 
                         
-                        <div class="left">
+                        <div>
+                            <ul class="dotted">
                             <h2>Dogs</h2>
                             <select id='breedSelect' class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
                                 <option class="form-control" value="">
                                     Select A Breed
                                 </option>
                             </select>
-                            <ul class="dotted">
+                            
 
                             <li>
                                 <div class="item">
@@ -110,14 +111,14 @@
                                     </div>
                                 </div>
                             </li>
-                        </ul>
+                        
                             
                             <div class="separator">
                                 
                             </div>
                             
                             <h2>Cats</h2>
-                            <ul class="dotted">
+                            
                                 <li>
                                     <div class="item">
                                         <span>Baths only</span>

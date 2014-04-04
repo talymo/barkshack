@@ -52,7 +52,7 @@
 }
 
             .container #whiteContainer #grooming h2 {
-                text-align:left;
+                text-align:center;
                 margin-bottom:10px;
             }
 
@@ -167,7 +167,7 @@
     }  
     
   .container #whiteContainer h2 {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 36px;
     font-family: 'Montez', cursive;
       
