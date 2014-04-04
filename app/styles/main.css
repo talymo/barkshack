@@ -133,6 +133,10 @@ body {
             display:inline-block;
         }
 
+        #social.nav li.visible-xs {
+            display: inline-block !important;
+        }
+
 		.nav#social img {
             width:35px;
         }
@@ -343,7 +347,9 @@ body {
             width:20px;
         }
     
-    .
+    #social.nav li.visible-xs {
+        display: none !important;
+    }
     
     .container #tealContainer {
         padding: 10px;

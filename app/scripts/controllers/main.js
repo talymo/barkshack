@@ -14,6 +14,39 @@ barkshack.controller('HeaderCtrl', function($scope, $location) {
             $('#navbar').collapse('hide');
         }
     };  
+    
+    $scope.getLocation = function($scope) {
+        var locationMarker = null;
+        if(navigator.geolocation){
+              navigator.geolocation.getCurrentPosition(
+                function( position ){
+
+                if (locationMarker){
+                    return;
+                }
+
+                var currentLat = position.coords.latitude;
+                var currentLong = position.coords.longitude;
+                                    
+                var url = 'https://maps.google.com/maps?saddr=' + currentLat + ',' + currentLong + '&daddr=33 Ulmer Road, Bluffton, SC';
+
+                window.open(
+                  url
+                );
+
+
+                },
+                function( error ){
+                    console.log( "Something went wrong: ", error );
+                },
+                {
+                    timeout: (5 * 10000),
+                    maximumAge: (1000 * 60 * 15),
+                    enableHighAccuracy: true
+                }
+            );
+        }  
+    };
 });
 
 barkshack.controller('MainCtrl', function ($scope) {
