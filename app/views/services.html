@@ -94,11 +94,15 @@
                         <div>
                             <ul class="dotted">
                             <h2>Dogs</h2>
-                            <select size="3" id='breedSelect' class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
+                               <div class="row">
+                                <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
+                                  <select  id='breedSelect' class="item form-control" role="menu" ng-model="selectedBreed" ng-options="breed.name for breed in breeds" ng-change="setBreed(selectedBreed)">
                                 <option class="form-control" value="">
                                     Select A Breed
                                 </option>
-                            </select>
+                            </select>  
+                                </div>
+                            </div>
                             
 
                             <li>

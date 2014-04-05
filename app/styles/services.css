@@ -49,11 +49,6 @@
         
            
 
-#grooming #breedSelect {
-    
-    margin-bottom:20px;
-    max-width:545px;
-}
 
             .container #whiteContainer #grooming h2 {
                 text-align:center;
@@ -226,7 +221,7 @@
     
     #grooming select {
         margin-bottom:20px;
-        width:50%;
+        
     }
     
 }
