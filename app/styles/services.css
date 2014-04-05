@@ -49,11 +49,14 @@
         
            
 
+<<<<<<< HEAD
 #grooming #breedSelect {
     width: 100%;
     margin-bottom:20px;
     max-width:545px;
 }
+=======
+>>>>>>> 3abd654fee6dcc133473aa3d35f2a3cecf6a2a42
 
             .container #whiteContainer #grooming h2 {
                 text-align:center;
@@ -240,7 +243,7 @@
     
     #grooming select {
         margin-bottom:20px;
-        width:50%;
+        
     }
     
 }

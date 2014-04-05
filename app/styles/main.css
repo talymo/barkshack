@@ -64,9 +64,12 @@ body {
     .navbar {
         margin-bottom:0px;
         background-color:#fafafa;
-        padding-bottom:10px;
         border-top:5px solid #4A6C16;
         border-radius:0;
+    }
+
+    .navbar .in {
+        border-bottom: 3px solid #4A6C16;
     }
 
     .navbar .container {
@@ -94,7 +97,7 @@ body {
 
     .navbar-toggle {
         border-color:#002D56;
-        margin-bottom:2px;
+        margin-bottom:10px;
         margin-top:24px;
         background-color:#002D56;
     }
@@ -315,9 +318,17 @@ body {
         padding: 0 30px 20px;
     }
     
+    .in{
+        border-bottom:0;
+    }
+    
     
     .navbar .nav {
         margin-top:12px;
+    }
+    
+    .navbar .in {
+        border-bottom:0;
     }
     
     .nav#social a {
