@@ -136,6 +136,11 @@ body {
             display:inline-block;
         }
 
+        .nav#social li a {
+            padding-left:5px;
+            padding-right:5px;
+        }
+
         #social.nav li.visible-xs {
             display: inline-block !important;
         }
@@ -357,6 +362,11 @@ body {
         .nav#social img {
             width:20px;
         }
+    
+        .nav#social li a {
+                padding-left:10px;
+                padding-right:10px;
+            }
     
     #social.nav li.visible-xs {
         display: none !important;
