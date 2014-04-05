@@ -11,18 +11,20 @@
 
         .container #whiteContainer .services-tab {
     
-            font-size: 20px;
+            font-size: 18px;
             color: #7F6B5B;
             padding-bottom: 10px;
 
         }
 
         .container #whiteContainer h2 {
-            font-size: 18px;
+            font-size: 36px;
             line-height: 30px;
             text-align: center;
             font-family: 'Montez', cursive;
             color: #717073;
+            margin-top:0px;
+            margin-bottom:30px;
         }
 
         .container #whiteContainer .services-tab {
@@ -43,21 +45,19 @@
                 margin-bottom:30px;
             }
 
-            #grooming select[multiple], select[size] {
-            height: 63px;
-            }
+            
         
            
 
 #grooming #breedSelect {
-    
+    width: 100%;
     margin-bottom:20px;
     max-width:545px;
 }
 
             .container #whiteContainer #grooming h2 {
                 text-align:center;
-                margin-bottom:10px;
+                margin-bottom:18px;
             }
 
             .container #whiteContainer #grooming .separator {
@@ -193,12 +193,26 @@
         display: inline-block;
     } 
     
+    #grooming #breedSelect {
+        width: 90%;
+    }
+    
+    ul.dotted {
+        float: left;
+        padding-right: 0;
+        width: 380px;
+    }
+    
+    ul.dotted p {
+        width:330px;
+    }
+    
     .dotted div.item {
-         width: 92%;
+         width: 76%;
      }
 
     .dotted div.prices {
-        width: 8%;
+        width: 13%;
         overflow: visible;
     } 
     
