@@ -170,9 +170,11 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
     
     
     $scope.checkForm = function() {
+        
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
         if($scope.appointment.day && $scope.appointment.month && $scope.appointment.year && $scope.appointment.time && $scope.appointment.service && $scope.appointment.name && $scope.appointment.phone && $scope.appointment.email) {
             
-            if($scope.appointment.pickup == 'Yes') {
+            if($scope.appointment.pickup == 'Yes', $scope.appointment.phone.match(phoneno)) {
                 $scope.checkBox();
             } else {
                 $scope.disabled = false;
@@ -183,6 +185,22 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
             $scope.disabled = true;
             $scope.$apply();
         }
+        
+        
+           
+  if($scope.appointment.phone.match(phoneno))
+        {
+      $scope.disabled = false;
+                
+        }  
+      else  
+        {  
+       $scope.disabled = true;
+                $scope.$apply();
+        }  
+       
+  
+  
            
     };
     
