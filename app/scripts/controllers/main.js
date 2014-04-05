@@ -69,7 +69,7 @@ barkshack.controller('MainCtrl', function ($scope) {
             featureType: 'water', 
             elementType: 'all', 
             stylers: [ 
-                { hue: '#A1C1BE' }, 
+                { hue: '#002D56' }, 
                 { saturation: -54 }, 
                 { lightness: -9 }, 
                 { visibility: 'on' } 
