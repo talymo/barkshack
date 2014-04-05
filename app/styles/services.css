@@ -42,6 +42,10 @@
                 overflow:hidden;
                 margin-bottom:30px;
             }
+
+            #grooming select[multiple], select[size] {
+            height: 63px;
+            }
         
            
 
