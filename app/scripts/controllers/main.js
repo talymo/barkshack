@@ -186,12 +186,21 @@ barkshack.controller('AppointmentCtrl', function($scope, $http, instagrams) {
             $scope.$apply();
         }
      
-       if($scope.appointment.phone.match(phonen                                $scope.disable                      
-                             {  
-                                  ue;
-                  pe.$apply();
-                }       
-    };
+       if($scope.appointment.phone.match(phoneno))
+         {
+       $scope.disabled = false;
+                
+         }  
+       else  
+         {  
+        $scope.disabled = true;
+                 $scope.$apply();
+         }  
+        
+   
+   
+             
+      };
     
     $scope.checkBox = function() {
         if($scope.appointment.pickup == 'Yes') {
